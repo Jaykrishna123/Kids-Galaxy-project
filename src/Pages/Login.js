@@ -12,7 +12,9 @@ const Login = () => {
                 <p>
                   To get exciting discounts, offers, free study resources, <br /> special
                   programs from Kids Galaxy
+                  <Link to='/createaccount'>
                   <span class="blue"> Sign Up here.</span>
+                  </Link>
                 </p>
           </div>
         </div>
@@ -40,7 +42,10 @@ const Login = () => {
                   <p class="blue">Forgot Password</p>
                 </div>
                 <span>
+                  <Link to='/'>
                   <input class="text-small-uppercase-button" id="submit" type="submit" value="Login" />
+                  </Link>
+                  
                 </span>
               </form>
 

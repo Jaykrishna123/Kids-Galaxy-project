@@ -12,7 +12,9 @@ const EducationalDetails = () => {
                 <p>
                   To get exciting discounts, offers, free study resources, <br /> special
                   programs from Kids Galaxy
+                  <Link to='/createaccount'>
                   <span class="blue"> Sign Up here.</span>
+                  </Link>                
                 </p>
           </div>
         </div>
@@ -60,8 +62,10 @@ const EducationalDetails = () => {
                   </Link>
                   
               
-                   
+                   <Link to='/'>
                    <input class="text-small-uppercase-button edu_text_btn" id="submit" type="submit" value="Submit"/>
+                   </Link>
+                   
              
              
               </span>
@@ -77,9 +81,12 @@ const EducationalDetails = () => {
                   <img src="Images/Gmail Icon.svg" alt="" />
                   <p>
                     Already a member?
-                    <a href="{}">
+                    <Link to='/login'>
+                      <a href="{}">
                       <span class="blue"> Log in</span>
-                    </a>
+                      </a>
+                    </Link>
+                   
                   </p>
                 </div>
               </div>

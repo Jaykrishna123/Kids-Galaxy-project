@@ -13,7 +13,9 @@ const PersonalDetails = () => {
                 <p>
                   To get exciting discounts, offers, free study resources, <br /> special
                   programs from Kids Galaxy
+                  <Link to='/createaccount'>
                   <span class="blue"> Sign Up here.</span>
+                  </Link>                
                 </p>
           </div>
         </div>
@@ -61,9 +63,12 @@ const PersonalDetails = () => {
             <img src="Images/Gmail Icon.svg" alt="" />
             <p>
               Already a member?
-              <a href="{}">
-                <span class="blue"> Log in</span>
-              </a>
+              <Link to='/login'>
+               <a href="{}">
+               <span class="blue"> Log in</span>
+               </a>
+              </Link>
+             
             </p>
           </div>
         </div>

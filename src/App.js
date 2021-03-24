@@ -7,7 +7,7 @@ import Login from './Pages/Login';
 import CreateAccount from './SignupForms/CreateAccount';
 import PersonalDetails from './SignupForms/PersonalDetails'
 import EducationalDetails from './SignupForms/EducationalDetails'
-
+import RequestDemo from "./SignupForms/RequestDemo";
 import './App.css'
 
 function App() {
@@ -19,6 +19,7 @@ function App() {
     <Switch>
     <Route path='/' exact component={LandingPage}/>
     <Route path='/login' component={Login}/>
+    <Route path='/requestdemo' component={RequestDemo}/>
     <Route path='/createaccount' component={CreateAccount}/>
     <Route path='/personaldetails' component={PersonalDetails}/>
     <Route path='/educationaldetails' component={EducationalDetails}/>
