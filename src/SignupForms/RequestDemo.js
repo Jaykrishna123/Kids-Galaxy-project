@@ -10,7 +10,7 @@ const RequestDemo = () => {
 
    return (
       <div>
-\         <NavbarLogo/>
+        <NavbarLogo/>
          <div class="row mainContent">
             <div class="mainLeft col-md-6 ">
                <ul class="choose">
