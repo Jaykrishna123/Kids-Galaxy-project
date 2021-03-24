@@ -29,23 +29,23 @@ input {
   width: 15vw;
 }
 /* main Left start */
-.mainLeftLogin {
+.mainLeft {
   text-align: center;
 }
-.mainLeftLogin img {
-  width: 70%;
+.mainLeft img {
+  width: 60%;
   position: relative;
   margin: 0 auto;
   object-fit: contain !important;
 }
-.mainLeftLogin p {
-  width: 70%;
+.mainLeft p {
+  width: 534px;
   margin: 0 auto;
-  font-size: 1.2rem;
+  font-size: 20px;
   margin-top: 20px;
 }
-.mainLeftContentLogin {
-  /*width: 90%;*/
+.mainLeftContent {
+  width: 90%;
   margin: 0 auto;
   position: absolute;
   top: 50%;
@@ -53,19 +53,19 @@ input {
   transform: translateY(-50%);
 }
 /* main Left end */
-.middleLineLogin {
+.middleLine {
   border-right: 1px solid grey;
   height: 100%;
   width: 1px;
   position: absolute;
-  right: 50%;
+  right: 0;
 }
-/* mainRightLoginstart */
-.mainRightLogin {
+/* mainRight start */
+.mainRight {
   text-align: center;
 }
-.loginCardLogin {
-  width: 75%;
+.loginCard {
+  width: 65%;
   margin: 0 auto;
   top: 50%;
   -ms-transform: translateY(-50%);
@@ -78,7 +78,7 @@ input {
     0 8.5px 17.6px rgba(0, 0, 0, 0.048), 0 15.9px 33px rgba(0, 0, 0, 0.058),
     0 38px 79px rgba(0, 0, 0, 0.08);
 }
-.cardContentLogin {
+.cardContent {
   display: flex;
   flex-direction: column;
   width: 90%;
@@ -90,14 +90,13 @@ input {
   border-bottom: 0.2vh solid rgb(175, 175, 175);
 }
 .card .title h1 {
-  font-size: 50px;
+  font-size: 40px;
   color: #57bb71;
   font-weight: 600;
   padding: 1%;
-  margin-top: 1rem;
 }
 .inputs {
-  width: 80%;
+  width: 90%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -106,14 +105,21 @@ input {
 }
 .inputs p {
   margin: 0;
-  margin-left: 1vw;
-  margin-bottom: 1%;
+  margin-left: 0.5vw;
+  margin-bottom: 2px;
   margin-top: 5%;
-  font-size: 22px;
+  font-size: 18px;
 }
-
+.inputs input {
+  height: 42px;
+  width: 100%;
+  padding: 13px;
+  border-radius: 5vh;
+  font-size: 16px;
+  border: 0.1vw solid rgb(105, 105, 105);
+}
 .checkbox {
-  /* width: 73%; */
+  width: 73%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -123,7 +129,7 @@ input {
 }
 .checkbox p {
   margin: 0;
-  font-size: 20px;
+  font-size: 16px;
 }
 .checkbox input {
   width: 18px;
@@ -137,8 +143,9 @@ input {
 }
 .rememberBox p {
   margin-left: 5px;
-  margin-right: 5px;
+  font-size: 18px;
 }
+
 
 .login {
   width: 74%;
@@ -187,7 +194,7 @@ input {
 }
 
 .faceG p {
-  font-size: 20px;
+  font-size: 18px;
 }
 .blue {
   color: #3fa7d6;
@@ -196,160 +203,385 @@ input {
 .orLogin {
   margin-bottom: 5%;
 }
+/* mainRight end */
 
-/* Structure */
+@media screen and (max-width: 1500px) {
+  .mainLeft p {
+    width: 70%;
+    font-size: 22px;
+  }
+  .mainLeft img {
+    width: 60%;
+  }
+  .loginCard {
+    width: 65%;
+  }
+  .card .title h1 {
+    font-size: 40px;
+  }
+  .CreatedAccount-half-inputs input .inputs input {
+    padding: 2.1%;
+  }
+  .inputs p {
+    font-size: 18px;
+    margin-top: 2%;
+  }
+  .inputs input {
+    font-size: 16px;
+  }
 
-input[type="submit"] {
-  background: #fff;
-  height: 2.75rem;
-  margin: 1em auto auto;
-}
-
-@media (min-width: 768px) {
-  input[type="submit"] {
-    background: #fff;
-    bottom: 2.75rem;
-    left: 2.55rem;
-    height: 2.75rem;
-    padding: 0 3rem;
-    /*position: absolute;*/
+  .checkbox {
+    margin-top: 1%;
+    margin-bottom: 2%;
+  }
+  .checkbox p {
+    font-size: 18px;
+  }
+  .login {
+    margin-bottom: 10px;
+  }
+  .mainLeft img {
+    width: 65%;
+  }
+  .mainLeft p {
+    font-size: 18px;
   }
 }
 
-input[type="email"],
-input[type="password"] {
-  height: 1.5rem;
-  margin: 0 0 1.5rem;
-  width: 100%;
-}
+@media screen and (max-width: 1400px) {
+  .loginCard {
+    width: 70%;
+  }
+  .mainLeft img {
+    width: 65%;
+  }
+  .navbarStyle img {
+    /* width: 20%; */
+  }
 
-form {
-  overflow: hidden;
-  /* padding: 10%; */
-  position: relative;
-  /* width: 85%; */
-}
-
-@media (min-width: 768px) {
-  form {
-    float: left;
-    height: 78%;
-    padding: 2% 6%;
-    /* width: 38%; */
+  .card .title h1 {
+    font-size: 3vw;
+  }
+  .inputs input {
+    font-size: 16px;
+  }
+  .inputs p {
+    font-size: 1.3vw;
+  }
+  .checkbox {
+    margin-top: 3%;
+    margin-bottom: 3%;
+  }
+  .checkbox p {
+    font-size: 1.2vw;
+  }
+  .login {
+    margin-bottom: 5%;
+  }
+  .loginBtn {
+    font-size: 1.1vw;
+  }
+  .mainLeft p {
+    font-size: 18px;
   }
 }
 
-main {
-  margin: 2% auto !important;
-  overflow: hidden;
-  position: relative;
-  width: 80%;
-}
-
-@media (min-width: 768px) {
-  main {
-    /*height: 21.25rem;*/
-    left: 50%;
-    margin: auto;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    /*width: 42.5rem;*/
+@media screen and (max-width: 1135px)  {
+  .inputs {
+    width: 100%;
+  }
+  .checkbox {
+    width: 100%;
+  }
+  .login {
+    width: 100%;
+  }
+  .mainLeft img {
+    width: 84%;
+  }
+  .mainLeft p {
+    font-size: 18px;
+  }
+  .faceG p {
+    font-size: 20px;
+  }
+  .inputs p {
+    font-size: 18px;
+    padding-bottom: 2px;
+  }
+  .checkbox {
+    padding-top: 5px;
+    padding-bottom: 8px;
+  }
+  .checkbox p {
+    font-size: 18px;
+  }
+  .card .title h1 {
+    font-size: 38px;
+  }
+  .loginBtn {
+    font-size: 1.7vw;
+  }
+  .loginCard {
+    width: 84%;
+  }
+  .inputs input {
+    height: 42px;
   }
 }
 
-.loginInput {
-  background: none;
-  border: none;
-  border-bottom: 2px solid #57bb71;
-  box-sizing: border-box;
-  outline: none;
-}
-
-input[type="email"]:required,
-input[type="password"]:required {
-  box-shadow: none;
-  outline: none;
-  font-size: 1rem;
-}
-
-input[type="submit"] {
-  background: #f37b56;
-  border: none;
-  color: #fff;
-  padding: 0 2rem;
-  width: 80%;
-}
-
-input[type="submit"]:hover,
-input[type="submit"]:focus {
-  background: #f79577;
-  cursor: pointer;
-  outline: none;
-}
-
-.inputs--filled label {
-  transform: translate(0, 0);
-}
-
-.inputs--invalid input {
-  animation: shake 0.3s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
-  background: url(//my-assets.netlify.com/codepen/dailyui-001/ico-invalid.svg)
-    center right no-repeat;
-  border-bottom: 2px solid #f37b56;
-  box-shadow: none;
-  color: #f37b56;
-  transform: translate3d(0, 0, 0);
-}
-
-@keyframes shake {
-  0%,
-  100% {
-    transform: translate3d(0, 0, 0);
+@media screen and (max-width: 992px) {
+  .mainLeft {
+    display: none;
   }
-
-  33% {
-    transform: translate3d(-6px, 0, 0);
+  .loginCard {
+    width: 60%;
   }
-
-  66% {
-    transform: translate3d(6px, 0, 0);
+  .card .title h1 {
+    font-size: 40px;
+  }
+  .inputs input {
+    padding: 2.1%;
+  }
+  .checkbox {
+    flex-direction: initial;
+    margin-top: 1%;
+    margin-bottom: 2%;
+  }
+  .login {
+    margin-bottom: 10px;
+  }
+  .loginBtn {
+    font-size: 22px;
+  }
+  .faceG p {
+    font-size: 20px;
+  }
+  .inputs p {
+    font-size: 20px;
+    padding-bottom: 2px;
+  }
+  .checkbox {
+    padding-top: 5px;
+    padding-bottom: 8px;
+  }
+  .checkbox p {
+    font-size: 20px;
+  }
+  .card .title h1 {
+    font-size: 38px;
   }
 }
-
-.inputs--invalid label {
-  color: #f37b56;
+@media screen and (max-width: 900px) {
+  .checkbox {
+    align-items: initial;
+    width: 90%;
+  }
+  .navbarStyle img {
+    width: 80%;
+  }
+  .faceG p {
+    font-size: 20px;
+  }
+  .loginCard {
+    top: 57%;
+    width: 70%;
+  }
+  .inputs p {
+    font-size: 20px;
+    padding-bottom: 2px;
+  }
+  .inputs input {
+    font-size: 18px;
+    padding-bottom: 5px;
+  }
+  .checkbox {
+    padding-top: 5px;
+    padding-bottom: 8px;
+  }
+  .checkbox p {
+    font-size: 20px;
+  }
+  .card .title h1 {
+    font-size: 38px;
+  }
+  .hero p {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .navbarStyle {
+    padding-top: 5%;
+  }
+  .navbarStyle img {
+    text-align: center;
+  }
+  .faceG p {
+    font-size: 20px;
+  }
+  .loginCard {
+    top: 57%;
+    width: 85%;
+  }
+  .inputs p {
+    font-size: 20px;
+    padding-bottom: 2px;
+  }
+  .inputs input {
+    font-size: 18px;
+    padding-bottom: 5px;
+  }
+  .checkbox {
+    padding-top: 5px;
+    padding-bottom: 8px;
+  }
+  .checkbox p {
+    font-size: 20px;
+  }
+  .card .title h1 {
+    font-size: 38px;
+  }
+  .hero p {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 660px) {
+  .faceG p {
+    font-size: 18px;
+  }
+  .loginCard {
+    top: 57%;
+    width: 90%;
+  }
+  .inputs p {
+    font-size: 18px;
+    padding-bottom: 2px;
+  }
+  .inputs input {
+    font-size: 16px;
+    padding-bottom: 5px;
+  }
+  .checkbox {
+    padding-top: 5px;
+    padding-bottom: 8px;
+  }
+  .checkbox p {
+    font-size: 17px;
+  }
+  .card .title h1 {
+    font-size: 35px;
+  }
+  .hero p {
+    font-size: 18px;
+  }
 }
 
-.loginLabel {
-  display: inline-block;
-  transform: translate(0, 1.25rem);
-  transition: 0.15s;
+@media screen and (max-width: 460px) {
+  .checkbox {
+    text-align: left;
+    /* flex-direction: column; */
+  }
+  .checkbox p {
+    font-size: 16px;
+  }
+  
+  .loginBtn {
+    font-size: 20px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+  .faceG p {
+    font-size: 16px;
+  }
+  .orLogin {
+    margin-bottom: 10px;
+  }
+  .rememberBox {
+    width: 50%;
+  }
+  .loginCard {
+    top: 55%;
+    width: 95%;
+  }
+  .inputs p {
+    font-size: 17px;
+    padding-bottom: 2px;
+  }
+  .inputs input {
+    font-size: 15px;
+    padding-bottom: 5px;
+  }
+  .checkbox {
+    padding-top: 5px;
+    padding-bottom: 8px;
+  }
+  .checkbox p {
+    font-size: 17px;
+  }
+  .card .title h1 {
+    font-size: 35px;
+  }
+  .hero p {
+    font-size: 17px;
+  }
 }
-
-main {
-  background: #f9f6ed;
-  border-radius: 0.25rem;
-  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.1);
+@media screen and (max-width: 375px) {
+  .mainRight {
+    margin-top: 10vh;
+  }
+  .checkbox {
+    width: 98%;
+    margin: 10px auto;
+  }
+  .inputs p {
+    font-size: 15px;
+  }
+  .inputs input {
+    font-size: 14px;
+    padding-bottom: 5px;
+  }
+  .loginBtn {
+    font-size: 18px;
+  }
+  .checkbox p {
+    font-size: 15px;
+  }
+  .card .title h1 {
+    font-size: 30px;
+  }
+  .hero p {
+    font-size: 15px;
+  }
+  .faceG p {
+    font-size: 15px;
+  }
 }
-
-.text-body {
-  color: #354c58;
-  font: 700 5rem "Montserrat", sans-serif;
-}
-
-.text-small-uppercase-login {
-  color: #57bb71;
-  font: 700 1.5rem "Montserrat";
-  /* letter-spacing: 0.2rem; */
-  /* text-transform: uppercase; */
-  float: left;
-}
-
-.text-small-uppercase-button {
-  color: #57bb71;
-  font: 700 1.5rem "Montserrat";
-  letter-spacing: 0.5rem;
-  /* text-transform: uppercase; */
-  /* float: left; */
+@media screen and (max-width: 320px) {
+  .mainRight {
+    margin-top: 20vh;
+  }
+  .inputs p {
+    font-size: 15px;
+  }
+  .inputs input {
+    font-size: 14px;
+    padding-bottom: 5px;
+  }
+  .loginBtn {
+    font-size: 18px;
+  }
+  .checkbox p {
+    font-size: 15px;
+  }
+  .card .title h1 {
+    font-size: 30px;
+  }
+  .hero p {
+    font-size: 15px;
+  }
+  .faceG p {
+    font-size: 15px;
+  }
+  .hr {
+  }
 }
