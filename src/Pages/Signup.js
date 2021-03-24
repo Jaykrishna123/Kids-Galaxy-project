@@ -5,7 +5,6 @@ import CreateAccount from "../SignupForms/CreateAccount";
 import PersonalDetails from "../SignupForms/PersonalDetails";
 import EducationalDetails from "../SignupForms/EducationalDetails";
 
-import "./Signup.css";
 const Signup = () => {
   const [step, setStep] = useState(1);
   const [email, setEmail] = useState("");
@@ -23,6 +22,7 @@ const Signup = () => {
   };
 
   const renderSwitch = (step) => {
+    // eslint-disable-next-line default-case
     switch (step) {
       case 1:
         return (
@@ -48,18 +48,7 @@ const Signup = () => {
             setPhone={setPhone}
           />
         );
-      // case 3:
-      //   return (
-      //     <PersonalDetails_2
-      //       nextStep={nextStep}
-      //       previousStep={previousStep}
-      //       firstName={firstName}
-      //       setFirstName={setFirstName}
-      //       lastName={lastName}
-      //       setLastName={setLastName}
-      //       phone={phone}
-      //     />
-      //   );
+     
       case 3:
         return (
           <EducationalDetails
@@ -98,7 +87,9 @@ const Signup = () => {
             <img src="Images/Sign Up Illustration.png" alt="" />
             <p>
               If you already have an account
-              <span className="blue"> Log in here.</span>
+              <a href="/login"  className="login-underline">
+                <span className="blue"> Log in here</span>
+             </a>
             </p>
           </div>
           <div className="middleLine"></div>

@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState} from "react";
 // import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
@@ -150,7 +150,7 @@ const Login = () => {
                   <img src="Images/google.png" alt="" />
                   <p>
                     New User?
-                    <Link to="/createaccount">
+                    <Link to="/signup">
                       <span className="blue"> Sign Up</span>
                     </Link>
                   </p>

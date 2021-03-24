@@ -14,10 +14,8 @@ const CreateAccount = ({
 
   const [emailErr, setEmailErr] = useState({});
   const [passwordErr, setPasswordErr] = useState({});
-  const [termsOfService, setTermsOfService] = useState({});
 
   const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
   const handleSubmit = (e) => {
@@ -139,7 +137,8 @@ const CreateAccount = ({
           <p className="blue">Forgot Password</p>
         </div> */}
         <div className="login">
-          <button
+        <Link to='/personaldetails'>
+        <button
             className="loginBtn"
             onClick={handleSubmit}
             // disabled={
@@ -148,6 +147,8 @@ const CreateAccount = ({
           >
             Submit
           </button>
+        </Link>
+          
         </div>
         <div className="orLogin">
           <div className="hero">
