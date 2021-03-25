@@ -1,10 +1,204 @@
+
+.mainContent {
+  width: 100%;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 0;
+}
+.nav-homeBtn-img {
+  width: 15vw;
+}
+/* main Left start */
+.mainLeft {
+  text-align: center;
+}
+.mainLeft img {
+  width: 70%;
+  position: relative;
+  margin: 0 auto;
+  object-fit: contain !important;
+  padding-right: 5rem;
+}
+.mainLeft p {
+  width: 700px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  margin-top: 20px;
+  padding-right: 5rem;
+}
+.mainLeftContent {
+  /*width: 90%;*/
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+/* main Left end */
+.middleLine {
+  border-right: 1px solid grey;
+  height: 100%;
+  width: 1px;
+  position: absolute;
+  right: 50%;
+}
+/* mainRight start */
+.mainRight {
+  text-align: center;
+}
+.loginCard {
+  width: 75%;
+  margin: 0 auto;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  border-radius: 3% !important;
+  background-color: #f9f9f9 !important;
+  border: none !important;
+  box-shadow: 0 1.1px 2.2px rgba(0, 0, 0, 0.022),
+    0 2.5px 5.3px rgba(0, 0, 0, 0.032), 0 4.8px 9.9px rgba(0, 0, 0, 0.04),
+    0 8.5px 17.6px rgba(0, 0, 0, 0.048), 0 15.9px 33px rgba(0, 0, 0, 0.058),
+    0 38px 79px rgba(0, 0, 0, 0.08);
+}
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  justify-content: space-between;
+  margin: 0 auto;
+  text-align: center;
+}
+.card .title {
+  border-bottom: 0.2vh solid rgb(175, 175, 175);
+}
+.card .title h1 {
+  font-size: 50px;
+  color: #57bb71;
+  font-weight: 600;
+  padding: 1%;
+  margin-top: 1rem;
+}
+.inputs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0;
+  text-align: left;
+}
+.edu_inputs {
+  margin-top: 4.5rem;
+  margin-left: 1rem;
+}
+.inputs p {
+  margin: 0;
+  margin-left: 1vw;
+  margin-bottom: 1%;
+  margin-top: 5%;
+  font-size: 22px;
+}
+.inputs input {
+  width: 100%;
+  padding: 13px;
+  border-radius: 5vh;
+  font-size: 18px;
+  border: 0.1vw solid rgb(105, 105, 105);
+}
+.checkbox {
+  /* width: 73%; */
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.6%;
+  margin-bottom: 2.5%;
+}
+.checkbox p {
+  margin: 0;
+  /*font-size: 20px;*/
+}
+.checkbox input {
+  width: 18px;
+  height: 18px;
+}
+
+.rememberBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.rememberBox p {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.login {
+  width: 74%;
+  margin: 0 auto;
+  margin-bottom: 2.5%;
+}
+.loginBtn {
+  width: 100%;
+  background-color: rgb(87, 187, 113);
+  border: 2px solid rgb(87, 187, 113);
+  padding-top: 1.8%;
+  padding-bottom: 1.8%;
+  border-radius: 1.2vh;
+  font-size: 22px;
+  font-weight: 700;
+  color: white;
+  transition: all 0.5s;
+}
+.loginBtn:hover {
+  color: rgb(87, 187, 113);
+  background-color: transparent;
+}
+
+.hero {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5%;
+}
+.hero .hr {
+  width: 30%;
+  border-top: 0.1vh solid rgb(161, 161, 161);
+  position: relative;
+}
+.hero p {
+  font-size: 18px;
+  margin-bottom: 0;
+}
+.faceG img {
+  width: 12%;
+}
+.faceG img:last-of-type {
+  margin-left: 2%;
+}
+
+.faceG p {
+  font-size: 20px;
+}
+.blue {
+  color: #3fa7d6;
+  font-weight: 500;
+}
+.orLogin {
+  margin-bottom: 2%;
+  margin-top: 2%;
+}
+
+
+
 .backBtn {
   color: rgb(87, 187, 113);
   background-color: transparent;
   margin-right: 10px;
-}
-.login-underline:hover {
-  text-decoration: none;
 }
 .backBtn:hover {
   background-color: rgb(87, 187, 113);
@@ -21,7 +215,7 @@
 }
 
 .CreateAccount-password-confirm input {
-  width: 90%;
+  width: 95%;
 }
 .CreateAccount_submitDiv {
   width: 74%;
@@ -45,7 +239,7 @@
   background-color: transparent;
 }
 .CreatedAccount-half-inputs input {
-  padding: 0.4rem 0.2rem;
+  padding: 13px;
 }
 
 /* //Personal Details 1 start */
@@ -54,16 +248,17 @@
 }
 .personalDetails_1-loginBtnDiv {
   display: flex;
+  color: #57bb71;
+  font: 700 1.5rem 'Montserrat';
+  letter-spacing: 0.5rem;
 }
 .personalDetails_1-mobile_numbers_select {
   position: absolute;
   left: 0;
-  top: 64%;
+  top: 65%;
   margin-left: 5%;
   border: none;
-  font-size: 13px;
-  font-family: "Montserrat";
-  font-weight: 500;
+  font-size: 17px;
 }
 .personalDetails_1-inputs {
   margin-bottom: 10%;
@@ -75,34 +270,33 @@
 
 .EducationalDetailsBoard {
   display: flex;
+  /* margin: 2.5rem 0 0.8rem 0; */
 }
 .EducationalDetailsBoard_board {
-  padding: 1px 24px;
+  padding: 0.5rem 0.8rem;
   border-radius: 30px;
-  color: white;
-  border: 2px solid #262e42;
-  margin-right: 15px;
+  /*border: 2px solid #262e42;*/  
+  border: 2px solid rgb(87, 187, 113);
+  margin-right: 0.5rem;
   margin-top: 2%;
   cursor: pointer;
-  color: black;
+  color: rgb(87, 187, 113);
+  background-color: transparent;
+  text-align: center;
 }
 .EducationalDetailsBoard_board:hover {
-  background-color: #262e42;
-  color: #fff;
-  font-weight: 600;
+  background-color: rgb(87, 187, 113);
+  color: white;
 }
 .EducationalDetailsBoard_board p {
-  margin-top: 0px;
-  font-size: 0.7rem;
-  padding-left: 0rem;
-  margin-left: 0.1rem;
-  margin-bottom: 0.3rem;
+  margin: 0;
+  font: 500 1.2rem 'Montserrat';
 }
 .EducationalDetails_class {
   padding-top: 2%;
 }
 .EducationalDetails_class_select {
-  padding: 6px 20px;
+  padding: 15px;
   width: 100%;
   font-size: 17px;
   border-radius: 30px;
@@ -114,9 +308,7 @@
   margin-bottom: 1%;
 }
 .EducationalDetails_class_remeberBox p {
-  font-size: 10px;
-  position: fixed;
-  left: 22%;
+  font-size: 18px;
 }
 .EducationalDetails_class_select_stateDiv {
   width: 49%;
@@ -133,4 +325,915 @@
 }
 .confirmation-code {
   margin-bottom: 10%;
+}
+.edu_checkbox p {
+  font-size: 15px!important;
+}
+
+
+/* Structure */
+
+.login_btn {
+  background: #fff;
+  height: 2.75rem;
+  margin: 0.5em auto auto;
+}
+
+@media (min-width: 768px) {
+  .login_btn {
+    background: #fff;
+    bottom: 2.75rem;
+    left: 2.55rem;
+    height: 2.75rem;
+    padding: 0 3rem;
+    /*position: absolute;*/
+  }
+}
+
+input[type=email],
+input[type=password],
+input[type=text] {
+  height: 1.5rem;
+  margin: 0 0 1.5rem;
+  width: 100%;
+}
+
+form {
+  overflow: hidden;
+  /* padding: 10%; */
+  position: relative;
+  /* width: 85%; */
+}
+
+@media (min-width: 768px) {
+  form {
+    float: left;
+    height: 78%;
+    padding: 2% 6%;
+    /* width: 38%; */
+  }
+}
+
+main {
+  margin: 2% auto!important;
+  overflow: hidden;
+  position: relative;
+  width: 80%;
+}
+
+@media (min-width: 768px) {
+  main {
+    /*height: 21.25rem;*/
+    left: 50%;
+    margin: auto;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    /*width: 42.5rem;*/
+  }
+}
+
+/* Skin */
+
+/** {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #74bdb7;
+  font: 700 16px 'Montserrat', sans-serif;
+}*/
+
+input[type=email],
+input[type=password],
+input[type=text] {
+  background: none;
+  border: none;
+  border-bottom: 2px solid #57bb71;
+  box-sizing: border-box;
+  outline: none;
+}
+
+input[type=email]:required,
+input[type=password]:required,
+input[type=text]:required {
+  box-shadow: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+.login_btn {
+  background: #f37b56;
+  border: none;
+  color: #fff;
+  padding: 0 2rem;
+}
+
+.login_btn:hover,
+.login_btn:focus {
+  background: #f79577;
+  cursor: pointer;
+  outline: none;
+}
+
+.inputs--filled label {
+  transform: translate(0, 0);
+}
+
+.inputs--invalid input {
+  animation: shake 0.3s cubic-bezier(.36,.07,.19,.97) both;
+  background: url(//my-assets.netlify.com/codepen/dailyui-001/ico-invalid.svg) center right no-repeat;
+  border-bottom: 2px solid #f37b56;
+  box-shadow: none;
+  color: #f37b56;
+  transform: translate3d(0, 0, 0);
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  33% {
+    transform: translate3d(-6px, 0, 0);
+  }
+
+  66% {
+    transform: translate3d(6px, 0, 0);
+  }
+}
+
+.inputs--invalid label {
+  color: #f37b56;
+}
+
+label {
+  display: inline-block;
+  transform: translate(0, 1.25rem);
+  transition: 0.15s;
+}
+
+main {
+  background: #f9f6ed;
+  border-radius: 0.25rem;
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.1);
+}
+
+.text-body {
+  color: #354c58;
+  font: 700 5rem 'Montserrat', sans-serif;
+}
+
+.text-small-uppercase {
+  color: #57bb71;
+  font: 700 1.5rem 'Montserrat';
+  /* letter-spacing: 0.2rem; */
+  /* text-transform: uppercase; */
+  float: left;
+}
+
+.text-small-uppercase-button {
+  /* color: #57bb71!important; */
+  font: 700 1.5rem 'Montserrat'!important;
+  letter-spacing: 0.2rem!important;
+  /* text-transform: uppercase; */
+  /* float: left; */
+}
+
+.buttons {
+  margin-right: 0.5rem;
+}
+
+.back_btn {
+  width: 45%;
+}
+
+.class-dropdown {
+  color: #57bb71;
+  font: 700 1.5rem 'Montserrat';
+  /* letter-spacing: 0.2rem; */
+  /* text-transform: uppercase; */
+  float: left;
+}
+
+/* Background */
+.green-bg {
+  background-color: #57BB72;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+}
+.white-bg {
+  background-color: white;
+  position: absolute;
+  opacity: 0.85;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Thought of the day */
+.quote {
+  position: relative;
+  color: white;
+  font-family: 'Montserrat';
+  font-size: 15px;
+  text-align: center;
+  padding: 3px 0px 3px 0px;
+}
+.quote-bar {
+  position: relative;
+  background-color: #262e42;
+  border-radius: 0px 0px 15px 15px;
+}
+
+/* Navbar */
+.nav-bar {
+  position: relative;
+  padding-top: 0.2rem;
+  margin: 0px 5px 0px 5px;
+}
+.nav-left{
+  margin: auto;
+  width: auto;
+  margin-left: 0px;
+  padding-left: 0px;
+}
+.nav-logo {
+  margin: auto;
+  width: 200px;
+  height: auto;
+  padding-top:2px;
+}
+.nav-center{
+  margin: auto;
+  width: auto;
+  text-align: center;
+  padding: 7px 0px 0px 90px;
+  font-family: 'montserrat';
+  font-weight: 500;
+}
+.label-1 {
+  text-decoration: none;
+  color: #262e42;
+  margin-right: 35px;
+}
+.label-2 {
+  text-decoration: none;
+  color: #262e42;
+}
+.label-3 {
+  text-decoration: none;
+  color: #262e42;
+  margin-left: 35px;
+}
+.nav-right{
+  margin: auto;
+  width: auto;
+  text-align: right;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding: 0px;
+}
+.sign-in {
+  text-decoration: none;
+  color: #262e42;
+  padding-right: 20px;
+}
+.request-demo {
+  text-decoration: none;
+  color: white;
+  background-color: crimson;
+  padding: 8px 8px;
+  border-radius: 7px;
+  font-weight: 500;
+}
+.request-demo:hover {
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgb(0 0 0 / 0%);
+  -webkit-transition-duration: 0.6s;
+  transition-duration: 0.6s;
+  -webkit-transition-property: box-shadow;
+  transition-property: box-shadow;
+  background-color: transparent;
+  color: crimson;
+  font-weight: 500;
+  box-shadow: inset 0 0 0 3px  crimson, 0 0 1px rgb(0 0 0 / 0%);
+}
+.nav-ham {
+  width: auto;
+  margin: 9px 0px 0px 0px;
+  padding: 0px 0px 0px 20px;
+}
+.ham{
+  width: 30px;
+  height: 5px;
+  background-color: #262e42;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+.material-icons {
+  width: auto;
+  margin: auto;
+  margin: 10px 0px 0px 0px;
+  padding-right: 5px;
+  font-size: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #262e42;
+}
+.person-icon {
+  width: auto;
+  margin: auto;
+  margin-right: 0px;
+  margin-left: 0px;
+  padding-right: 2px;
+  text-decoration: none;
+  color: #262e42;
+}
+
+
+/* Breakpoints */
+@media screen and (min-width: 1439.98px) {
+  /*.nav-bar {
+      padding-top: 20px;
+      margin: 0px 15px 0px 15px;
+  }*/
+  .nav-logo {
+      width: 250px;
+      height: auto;
+      padding-top: 0px;
+  }
+}
+@media screen and (max-width: 1399.98px){
+  
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1377px) {
+.edu_card {
+  width: 90%!important;
+}
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+.edu_card {
+  width: 95%!important;
+}
+.edu_text{
+    font: 700 1rem 'Montserrat'!important;
+  }
+
+  .edu_text_btn {
+    font: 700 1rem 'Montserrat'!important;
+  }
+  .edu_title h1 {
+    font-size: 40px!important;
+  }
+  .text-small-uppercase {
+    font: 700 1rem 'Montserrat'!important;
+  }
+
+  .text-small-uppercase-button {
+    font: 700 1rem 'Montserrat'!important;
+  }
+  .card .title h1 {
+    font-size: 40px!important;
+  }
+  .loginCard {
+    width: 85%;
+  }
+  .EducationalDetailsBoard_board p {
+  font: 600 1rem 'Montserrat'!important;
+}
+}
+
+@media screen and (max-width: 1199.98px){
+  .material-icons {
+      margin-top: 10px;
+  }
+  .checkbox p {
+  font-size: 17px!important;
+}
+.edu_checkbox p {
+  font-size: 15px!important;
+}
+.edu_inputs {
+  margin-top: 3.5rem;
+}
+}
+@media screen and (max-width: 991.98px){
+.mainLeft {
+  display: none;
+}
+}
+
+@media screen and (max-width: 1024.98px) and (orientation: portrait) {
+  
+}
+
+@media screen and (min-width: 991px) and (max-width: 1046px) {
+  .text-small-uppercase {
+    font: 700 1.2rem 'Montserrat'!important;
+  }
+
+  .text-small-uppercase-button {
+    font: 700 1.2rem 'Montserrat'!important;
+  }
+  .card .title h1 {
+    font-size: 45px!important;
+  }
+  form {
+      padding: 10px;
+  }
+  .hero p {
+    font-size: 15px!important;
+  }
+  .faceG p {
+    font-size: 17px!important;
+  }
+  .checkbox p {
+    font-size: 15px!important;
+  }
+  .card .edu_title h1 {
+    font-size: 35px!important;
+  }
+}
+
+@media screen and (max-width: 768.98px) and (orientation: portrait) {
+}
+
+@media screen and (min-width: 767px) and (max-width: 992px) {
+.text-small-uppercase {
+    font: 700 1.1rem 'Montserrat'!important;
+  }
+
+  .text-small-uppercase-button {
+    font: 700 1.1rem 'Montserrat'!important;
+  }
+  .card .title h1 {
+    font-size: 40px!important;
+  }
+  form {
+      padding: 10px;
+  }
+  .hero p {
+    font-size: 13px!important;
+  }
+  .faceG p {
+    font-size: 15px!important;
+  }
+  .checkbox p {
+    font-size: 13px!important;
+  }
+  /* .EducationalDetailsBoard_board {
+  padding: 5px!important;
+} */
+.EducationalDetailsBoard_board p {
+  font: 600 0.9rem 'Montserrat'!important;
+}
+}
+
+@media screen and (min-width: 576px) and (max-width: 766px) {
+/*.edu_card {
+  width: 95%!important;
+}*/
+.edu_text{
+    font: 700 1rem 'Montserrat'!important;
+  }
+
+  .edu_text_btn {
+    font: 700 1rem 'Montserrat'!important;
+  }
+  .edu_title h1 {
+    font-size: 40px!important;
+  }
+  .checkbox p {
+    font-size: 13px!important;
+  }
+  .EducationalDetailsBoard_board p {
+  font: 600 1rem 'Montserrat'!important;
+}
+}
+
+
+@media screen and (max-width: 625.98px) {
+  /*.person-icon {
+      padding-right: 0px;
+  }*/
+  .nav-logo {
+      width: 180px;
+  }
+  /*.nav-ham {
+      margin: 7px 0px 0px 0px;
+  }*/
+  .text-small-uppercase {
+  font: 700 1.2rem 'Montserrat'!important;
+}
+
+.text-small-uppercase-button {
+  font: 700 1.2rem 'Montserrat'!important;
+}
+.card .title h1 {
+    font-size: 45px!important;
+  }
+  form {
+    padding: 10px;
+  }
+  .hero p {
+  font-size: 14px!important;
+}
+.faceG p {
+  font-size: 14px!important;
+}
+.checkbox p {
+  font-size: 13px!important;
+}
+.card .edu_title h1 {
+  font-size: 40px!important;
+}
+}
+@media screen and (max-width: 575.98px) {
+  /*.quote {
+      color: white;
+      font-family: 'Montserrat';
+      font-size: 12px;
+      text-align: center;
+      padding: 3px 0px 3px 0px;
+  }
+  .nav-bar {
+      padding-top: 8px;
+      margin: 0px 0px 0px 0px;
+  }*/
+  .nav-logo {
+      width: 150px;
+      height: auto;
+      padding-top: 4px;
+  }
+  /* .text-small-uppercase-button {
+    font: 700 0.8rem 'Montserrat'!important;
+  } */
+  .card .title h1 {
+    font-size: 30px!important;
+  }
+  form {
+      padding: 5px;
+  }
+  .hero p {
+    font-size: 12px!important;
+  }
+  .faceG p {
+    font-size: 12px!important;
+  }
+  .checkbox p {
+    font-size: 13px!important;
+  }
+  .loginCard {
+      width: 95%!important;
+  }
+  .checkbox input {
+    width: 15px;
+    height: 15px;
+}
+}
+
+@media screen and (min-width: 575px) and (max-width: 616px) {
+  .card .title h1 {
+    font-size: 30px!important;
+  }
+  .card .edu_title h1 {
+    font-size: 35px!important;
+  }
+  form {
+      padding: 5px;
+  }
+  .hero p {
+    font-size: 13px!important;
+  }
+  .faceG p {
+    font-size: 13px!important;
+  }
+  .checkbox p {
+    font-size: 13px!important;
+  }
+  .loginCard {
+      width: 90%!important;
+  }
+}
+
+@media screen and (min-width: 513px) and (max-width: 533px) {
+  .edu_board {
+    padding: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 485px) {
+  .loginCard {
+      width: 90%!important;
+  }
+  .login_btn {
+    padding: 0!important;
+  }
+}
+
+@media screen and (min-width: 415px) and (max-width: 459px) {
+  .edu_checkbox p {
+    font-size: 11px!important;
+  }
+}
+
+@media screen and (max-width: 415px) {
+  .card .title h1 {
+    font-size: 30px!important;
+  }
+  form {
+      padding: 5px;
+  }
+  .hero p {
+    font-size: 10px!important;
+  }
+  .faceG p {
+    font-size: 11px!important;
+  }
+  .checkbox p {
+    font-size: 11px!important;
+  }
+  .loginCard {
+      width: 95%!important;
+  }
+  .login_btn {
+    padding: 0!important;
+  }
+}
+
+@media screen and (max-width: 377px) {
+  .nav-logo {
+      width: 130px;
+      height: auto;
+      margin-top: 4px;
+  }
+  .checkbox p {
+  font-size: 12px!important;
+}
+.card .title h1 {
+    font-size: 32px!important;
+  }
+  /* .EducationalDetailsBoard_board {
+  padding: 5px!important;
+} */
+.EducationalDetailsBoard_board p {
+  font: 600 0.55rem 'Montserrat'!important;
+}
+.login_btn {
+  padding: 0!important;
+}
+.checkbox input {
+  width: 12px;
+  height: 12px;
+}
+}  
+
+@media screen and (max-width: 355px) {
+  .text-small-uppercase {
+    font: 700 1rem 'Montserrat'!important;
+  }
+
+  .text-small-uppercase-button {
+    font: 700 1rem 'Montserrat'!important;
+  }
+  .card .title h1 {
+    font-size: 30px!important;
+  }
+  form {
+      padding: 5px;
+  }
+  .hero p {
+    font-size: 10px!important;
+  }
+  .faceG p {
+    font-size: 10px!important;
+  }
+  .checkbox p {
+    font-size: 10px!important;
+  }
+  .loginCard {
+      width: 95%!important;
+  }
+  .EducationalDetailsBoard_board {
+  padding: 0.3rem!important;
+}
+.EducationalDetailsBoard_board p {
+  font: 600 0.8rem 'Montserrat'!important;
+}
+.edu_inputs {
+  margin-top: 3.5rem;
+}
+.login_btn {
+  padding: 0 !important;
+  height: 2.5rem!important;
+}
+}
+
+@media screen and (min-width: 354px) and (max-width: 399px) {
+.EducationalDetailsBoard_board {
+  padding: 0.3rem!important;
+  border-radius: 20px!important;
+  margin-right: 0.4rem!important;
+  margin-top: 2%!important;
+}
+.EducationalDetailsBoard_board p {
+  font: 600 0.8rem 'Montserrat'!important;
+}
+.card .edu_title h1 {
+  font-size: 27px!important;
+}
+.edu_checkbox p {
+  font-size: 10px!important;
+}
+}
+
+@media screen and (max-width: 365px) {
+  .edu_checkbox p {
+    font-size: 9.5px!important;
+  }
+}
+
+@media screen and (min-width: 337px) and (max-width: 353px) {
+  .card .edu_title h1 {
+    font-size: 25px!important;
+  }
+  .edu_checkbox p {
+    font-size: 9px!important;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 336px) {
+  .EducationalDetailsBoard_board {
+    padding: 0.3rem!important;
+  }
+  .EducationalDetailsBoard_board p {
+    font: 600 0.7rem 'Montserrat'!important;
+  }
+  .card .edu_title h1 {
+    font-size: 22px!important;
+  }
+  .edu_checkbox p {
+    font-size: 8.5px!important;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 330px) {
+  .card .personal-details-title h1 {
+    font-size: 25px!important;
+  }
+}
+
+@media screen and (max-width: 320.98px) {
+  .nav-logo {
+      width: 130px;
+      height: auto;
+      margin-top: 0px;
+  }
+  .text-small-uppercase {
+    font: 700 0.8rem 'Montserrat'!important;
+  }
+
+  .text-small-uppercase-button {
+    font: 700 0.8rem 'Montserrat'!important;
+  }
+  .card .title h1 {
+    font-size: 25px!important;
+  }
+  form {
+      padding: 5px;
+  }
+  .hero p {
+    font-size: 10px!important;
+  }
+  .faceG p {
+    font-size: 10px!important;
+  }
+  .checkbox p {
+    font-size: 10px!important;
+  }
+  .loginCard {
+      width: 95%!important;
+  }
+  .login_btn {
+    padding: 0 !important;
+    height: 2rem!important;
+  }
+  .EducationalDetailsBoard_board {
+  padding: 0.3rem!important;
+}
+.EducationalDetailsBoard_board p {
+  font: 600 0.6rem 'Montserrat'!important;
+}
+.edu_inputs {
+  margin-top: 3rem;
+}
+.card .edu_title h1 {
+  font-size: 20px!important;
+}
+.edu_checkbox p {
+  font-size: 7.5px!important;
+}
+.checkbox input {
+  width: 10px;
+  height: 10px;
+}
+}
+
+@media screen and (max-width: 293px) {
+  .edu_checkbox p {
+    font-size: 7px!important;
+  }
+  .checkbox input {
+    width: 9px;
+    height: 9px;
+  }
+}
+
+@media screen and (max-width: 288px) {
+  .card .personal-details-title h1 {
+    font-size: 22px!important;
+  }
+}
+
+@media screen and (min-width: 241px) and (max-width: 279px) {
+  .card .title h1 {
+    font-size: 20px!important;
+  }
+  .text-small-uppercase-button {
+    font: 700 0.7rem 'Montserrat'!important;
+  }
+  .EducationalDetailsBoard_board {
+    padding: 0.2rem!important;
+  }
+  .EducationalDetailsBoard_board p {
+    font: 600 0.55rem 'Montserrat'!important;
+  }
+}
+@media screen and (max-width: 240.98px) {
+  .nav-logo {
+      width: 110px;
+      height: auto;
+      margin-top: 0px;
+  }
+  .card .title h1 {
+    font-size: 20px!important;
+  }
+}
+
+@media screen and (min-width: 399px) and (max-width: 460px) {
+.EducationalDetailsBoard_board {
+  padding: 5px!important;
+  border-radius: 25px!important;
+  margin-right: 0.4rem!important;
+  margin-top: 2%!important;
+}
+.EducationalDetailsBoard_board p {
+  font: 600 0.9rem 'Montserrat'!important;
+}
+}
+
+@media screen and (min-width: 461px) and (max-width: 512px) {
+.EducationalDetailsBoard_board {
+  padding: 0.5rem!important;
+  border-radius: 25px!important;
+  margin-right: 0.4rem!important;
+  margin-top: 2%!important;
+}
+.EducationalDetailsBoard_board p {
+  font: 600 0.9rem 'Montserrat'!important;
+}
+}
+
+@media screen and (max-width: 309px) {
+.EducationalDetailsBoard_board {
+  /* padding: 5px!important; */
+  border-radius: 20px!important;
+  margin-right: 0.3rem!important;
+  margin-top: 2%!important;
+}
+.EducationalDetailsBoard_board p {
+  font: 600 0.53rem 'Montserrat'!important;
+}
+}
+
+@media screen and (min-width: 767px) and (max-width: 991px) {
+.loginCard {
+  width: 60%!important;
+}
+}
+
+@media screen and (min-width: 991px) and (max-width: 1250px) {
+.mainLeft img {
+  width: 60%!important;
+  right: 15%!important;
+}
+.mainLeft p {
+  width: 60%!important;
+  margin-left: 5%!important;
+}
 }

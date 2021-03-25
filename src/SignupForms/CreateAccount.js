@@ -53,10 +53,10 @@ const CreateAccount = ({
       isValid = true;
     }
     
-    if (!confirmPassword) {
+    if (!confPassword) {
       passwordErr.fieldEmpty = 'Password is required';
       isValid = false;
-    }else if (password !== confirmPassword) {
+    }else if (password !== confPassword) {
       passwordErr.notMatchingPassword = 'Passwords do not match';
       isValid = false;
     }else {
@@ -70,7 +70,7 @@ const CreateAccount = ({
 
   };
 
-  const [confirmPassword, setConfirmPassword] = useState("");
+  const [confPassword, setConfPassword] = useState("");
 
   return (
     <div className="card loginCard">
@@ -78,52 +78,83 @@ const CreateAccount = ({
         <div className="title">
           <h1>Create Account</h1>
         </div>
-        <div className="inputs">
-          <div className="input1">
-            <p>E-mail</p>
-            <input
-              type="text"
-              name="email"
-              onChange={(e) => setEmail(e.target.value)}
-              value={email}
-            />
-            {Object.keys(emailErr).map((key) => {
-                return <div style={{color: 'red', fontSize:'14px'}}>
-                  {emailErr[key]}
-                </div>
-            })}
-          </div>
-          <div className="CreateAccount-password-confirm">
-            <div className="CreatedAccount-half-inputs">
-              <p>Password</p>
-              <input
-                type="password"
-                name="password"
-                onChange={(e) => setPassword(e.target.value)}
-                value={password}
-              />
-              {Object.keys(passwordErr).map((key) => {
-                return <p style={{color: 'red', fontSize:'14px', marginTop:'0px'}}>
-                  {passwordErr[key]}
-                </p>
-              })}
-            </div>
-            <div className="CreatedAccount-half-inputs">
-              <p>Confirm Password</p>
-              <input
-                type="password"
-                name="confirmPassword"
-                onChange={(e) => setConfirmPassword(e.target.value)}
-                value={confirmPassword}
+
+
+        <form>
+              <span>
+                <label
+                  for="email"
+                  class="text-small-uppercase"
+                  style={email ? { transform: "translate(0,0)" } : null}
+                >
+                  Email
+                </label>
+                <input
+                  class="text-body"
+                  id="email"
+                  name="email"
+                  type="email"
+                  required
+                  onChange={(e) => setEmail(e.target.value)} />
+                  {Object.keys(emailErr).map((key) => {
+                    return <div style={{color: 'red', fontSize:'14px'}}>
+                    {emailErr[key]}
+                    </div>
+                  })}
+              </span>
+          
+              <span>
+                <label
+                  for="password"
+                  class="text-small-uppercase"
+                  style={password ? { transform: "translate(0,0)" } : null}
+                >
+                  Password
+                </label>
+                <input
+                  class="text-body"
+                  id="password"
+                  name="password"
+                  type="password"
+                  required
+                  onChange={(e) => setPassword(e.target.value)}
                 />
                 {Object.keys(passwordErr).map((key) => {
-                  return <div style={{color: 'red', fontSize:'14px', marginTop:'0px'}}>
+                  return <p style={{color: 'red', fontSize:'14px', marginTop:'0px'}}>
                     {passwordErr[key]}
-                  </div>
+                  </p>
                 })}
-            </div>
-          </div>
-        </div>
+              </span>
+
+              <span>
+                <label
+                  for="confPassword"
+                  class="text-small-uppercase"
+                  style={confPassword ? { transform: "translate(0,0)" } : null}
+                >
+                  Confirm Password
+                </label>
+                <input
+                  class="text-body"
+                  id="confPassword"
+                  name="confPassword"
+                  type="password"
+                  required
+                  onChange={(e) => setConfPassword(e.target.value)} />
+                  {Object.keys(passwordErr).map((key) => {
+                    return <div style={{color: 'red', fontSize:'14px', marginTop:'0px'}}>
+                      {passwordErr[key]}
+                    </div>
+                  })}
+              </span>
+              
+              <Link to='/personaldetails'>
+              <span>
+                {/* <input class="text-small-uppercase-button" id="submit" type="submit" value="Submit"/> */}
+                <button type="button" class="btn btn-sm text-small-uppercase-button login_btn" id="submit">Next</button>
+              </span>
+              </Link>             
+            </form>
         <p >
           <input type="checkbox" id="accept-checkbox"/>
           I accept the
@@ -142,7 +173,7 @@ const CreateAccount = ({
             className="loginBtn"
             onClick={handleSubmit}
             // disabled={
-            // (!password && !confirmPassword) || password !== confirmPassword
+            // (!password && !confPassword) || password !== confPassword
             // }
           >
             Submit
