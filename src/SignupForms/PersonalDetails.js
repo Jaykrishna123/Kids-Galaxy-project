@@ -142,7 +142,7 @@ const PersonalDetails = ({
                 </p>
               })}
         </span>
-        <div>
+        {/* <div>
           <Link to='/createaccount'>
           <span class="buttons">
           <button type="button" class="btn btn-sm text-small-uppercase-button login_btn back_btn" id="submit">Back</button>
@@ -153,8 +153,16 @@ const PersonalDetails = ({
           <button type="button" class="btn btn-sm text-small-uppercase-button login_btn back_btn" id="submit">Next</button>
           </span>
           </Link>
-      </div>
+      </div> */}
       </form>
+        <div className="login personalDetails_1-loginBtnDiv">
+          <button className="loginBtn backBtn" onClick={previousStep}>
+            Back
+          </button>
+          <button className="loginBtn" onClick={handleSubmit}>
+            Submit
+          </button>
+        </div>
         <p >
           <input type="checkbox" id="accept-checkbox"/>
           I accept the

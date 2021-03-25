@@ -151,7 +151,7 @@ const CreateAccount = ({
               <Link to='/personaldetails'>
               <span>
                 {/* <input class="text-small-uppercase-button" id="submit" type="submit" value="Submit"/> */}
-                <button type="button" class="btn btn-sm text-small-uppercase-button login_btn" id="submit">Next</button>
+                {/* <button type="button" class="btn btn-sm text-small-uppercase-button login_btn" id="submit">Next</button> */}
               </span>
               </Link>             
             </form>

@@ -97,7 +97,46 @@ const Login = () => {
               <div className="title">
                 <h1>Log in</h1>
               </div>
-              <div className="inputs">
+
+              <form>
+                <span>
+                  <label for="email" class="text-small-uppercase-login loginLabel"
+                   style={loginUsername ? {transform: 'translate(0,0)'} : null} >Email</label>
+                 <input class="text-body loginInput" id="email" name="email" type="email" required
+                    onChange={(e) => setLoginUsername(e.target.value)} />
+                  {Object.keys(loginUsernameErr).map((key) => {
+                    return <div style={{color: 'red', fontSize: '14px'}}>
+                      {loginUsernameErr[key]}
+                    </div>
+                  })}
+                </span>
+                <span>
+                  <label for="password" class="text-small-uppercase-login loginLabel"
+                     style={loginPassword ? {transform: 'translate(0,0)'} : null} >Password</label>
+                  <input class="text-body loginInput" id="password" name="password" type="password" required
+                    onChange={(e) => setLoginPassword(e.target.value)} />
+                  {Object.keys(loginPasswordErr).map((key) => {
+                    return <div style={{color: 'red', fontSize: '14px'}}>
+                      {loginPasswordErr[key]}
+                    </div>
+                  })}
+                </span>
+                <div class="checkbox">
+                  <div class="rememberBox">
+                    <input type="checkbox" />
+                    <p class="blue">Remember me</p>
+                  </div>
+                  <p class="blue">Forgot Password</p>
+                </div>
+                <span>
+                  {/* <input class="text-small-uppercase-button" id="submit" type="submit" value="Login" /> */}
+                  {/* <button type="button" class="btn btn-sm text-small-uppercase-button-login login_btn" id="submit">Login</button> */}
+                </span>
+              </form>
+
+
+
+              {/* <div className="inputs">
                 <div className="input1">
                   <p>E-mail</p>
                   <input
@@ -126,7 +165,7 @@ const Login = () => {
                     </div>
                   })}
                 </div>
-              </div>
+              </div> */}
               <div className="checkbox">
                 <div className="rememberBox">
                   <input type="checkbox" />
