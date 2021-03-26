@@ -93,6 +93,7 @@ const PersonalDetails = ({
               name="fname"
               type="text"
               required
+              value={firstName}
               onChange={(e) => setFirstName(e.target.value)} />
             {Object.keys(firstNameErr).map((key) => {
                 return <p style={{ color: 'red', fontSize:'14px'}}>
@@ -114,6 +115,7 @@ const PersonalDetails = ({
               name="lname"
               type="text"
               required
+              value={lastName}
               onChange={(e) => setLastName(e.target.value)} />
               {Object.keys(lastNameErr).map((key) => {
                 return <p style={{color: 'red', fontSize:'14px' }}>
@@ -135,6 +137,7 @@ const PersonalDetails = ({
               name="mobile"
               type="text"
               required
+              value={phone}
               onChange={(e) => setPhone(e.target.value)} />
             {Object.keys(phoneErr).map((key) => {
                 return <p style={{color: 'red', fontSize:'14px', marginTop:'20px'}}>

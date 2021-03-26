@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import ReactDOM from 'react-dom'
 
 
 import "./Signup.css";
@@ -14,9 +15,6 @@ const CreateAccount = ({
 
   const [emailErr, setEmailErr] = useState({});
   const [passwordErr, setPasswordErr] = useState({});
-
-  const [show, setShow] = useState(false);
-  const handleShow = () => setShow(true);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -46,7 +44,8 @@ const CreateAccount = ({
     if (!password) {
       passwordErr.fieldEmpty = 'Password is required';
       isValid = false;
-    }else if (!regex_password.test(password)) {
+    }
+    if (!regex_password.test(password)) {
       passwordErr.lengthErr = `Must contain one uppercase, one symbol, one number and 8 digits long`;
       isValid = false;
     }else {
@@ -72,6 +71,11 @@ const CreateAccount = ({
 
   const [confPassword, setConfPassword] = useState("");
 
+//   const changeStyles = () => {
+//     let element = document.getElementsByTagName('label')
+//     ReactDOM.findDOMNode(element).style.transform = this.state.isClicked? translate(0,0) : null
+// }
+
   return (
     <div className="card loginCard">
       <div className="cardContent">
@@ -86,6 +90,7 @@ const CreateAccount = ({
                   for="email"
                   class="text-small-uppercase"
                   style={email ? { transform: "translate(0,0)" } : null}
+                  // onClick={changeStyles}
                 >
                   Email
                 </label>
@@ -95,6 +100,7 @@ const CreateAccount = ({
                   name="email"
                   type="email"
                   required
+                  value={email}
                   onChange={(e) => setEmail(e.target.value)} />
                   {Object.keys(emailErr).map((key) => {
                     return <div style={{color: 'red', fontSize:'14px'}}>
@@ -117,6 +123,7 @@ const CreateAccount = ({
                   name="password"
                   type="password"
                   required
+                  value={password}
                   onChange={(e) => setPassword(e.target.value)}
                 />
                 {Object.keys(passwordErr).map((key) => {
@@ -140,7 +147,9 @@ const CreateAccount = ({
                   name="confPassword"
                   type="password"
                   required
-                  onChange={(e) => setConfPassword(e.target.value)} />
+                  value={confPassword}
+                  onChange={(e) => setConfPassword(e.target.value)}
+                  onClick={() => moveLabel}/>
                   {Object.keys(passwordErr).map((key) => {
                     return <div style={{color: 'red', fontSize:'14px', marginTop:'0px'}}>
                       {passwordErr[key]}
@@ -154,7 +163,7 @@ const CreateAccount = ({
                     <input type="checkbox" id="accept-checkbox"/>
                       <p class="blue">
                       I accept the 
-                      <button class="terms-of-service" onClick={handleShow}>Terms of Service</button>
+                      <button class="terms-of-service">Terms of Service</button>
                       </p>
                   </div>
               </div>

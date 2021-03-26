@@ -3,8 +3,20 @@ import {Link} from 'react-router-dom'
 import './Signup.css'
 
 const EducationalDetails = ({
-  previousStep
+  nextStep,
+  previousStep,
+  firstName,
+  setFirstName,
+  lastName,
+  setLastName,
+  phone,
+  setPhone,
 }) => {
+
+  const showSubmit = () => {
+    alert('Account Created!');  
+  };
+
    return (
             <div class="card loginCard edu_card">
             <div class="cardContent">
@@ -48,7 +60,7 @@ const EducationalDetails = ({
             </span>
             <Link to=''>
             <span>
-            <button type="button" class="btn btn-sm text-small-uppercase-button login_btn back_btn edu_text" id="submit">Submit</button>
+            <button type="button" class="btn btn-sm text-small-uppercase-button login_btn back_btn edu_text" id="submit" onClick={showSubmit}>Submit</button>
             </span>
             </Link>
           </form>
