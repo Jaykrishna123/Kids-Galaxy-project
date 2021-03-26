@@ -147,40 +147,27 @@ const CreateAccount = ({
                     </div>
                   })}
               </span>
+
+              <span>
+              <div class="checkbox edu_checkbox">
+                  <div class="rememberBox">
+                    <input type="checkbox" id="accept-checkbox"/>
+                      <p class="blue">
+                      I accept the 
+                      <button class="terms-of-service" onClick={handleShow}>Terms of Service</button>
+                      </p>
+                  </div>
+              </div>
+            </span>
               
               <Link to='/personaldetails'>
               <span>
                 {/* <input class="text-small-uppercase-button" id="submit" type="submit" value="Submit"/> */}
-                {/* <button type="button" class="btn btn-sm text-small-uppercase-button login_btn" id="submit">Next</button> */}
+                <button type="button" class="btn btn-sm text-small-uppercase-button login_btn" id="submit" onClick={handleSubmit}>Next</button>
               </span>
               </Link>             
             </form>
-        <p >
-          <input type="checkbox" id="accept-checkbox"/>
-          I accept the
-          <button class="terms-of-service" onClick={handleShow}>Terms of Service</button>
-        </p>
-        {/* <div className="checkbox">
-          <div className="rememberBox">
-            <input type="checkbox" />
-            <p>Remember me</p>
-          </div>
-          <p className="blue">Forgot Password</p>
-        </div> */}
-        <div className="login">
-        <Link to='/personaldetails'>
-        <button
-            className="loginBtn"
-            onClick={handleSubmit}
-            // disabled={
-            // (!password && !confPassword) || password !== confPassword
-            // }
-          >
-            Submit
-          </button>
-        </Link>
-          
-        </div>
+
         <div className="orLogin">
           <div className="hero">
             <span className="hr"></span>

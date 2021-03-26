@@ -4,22 +4,6 @@ import './Signup.css'
 
 const EducationalDetails = () => {
    return (
-      <div>
-         <div class="row container-fluid mainContent">
-        <div class= "mainLeft col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
-            <div class="mainLeftContent d-md-none d-lg-block">
-                <img src="Images/Sign Up Illustration.svg" alt="" />
-                <p>
-                  To get exciting discounts, offers, free study resources, <br /> special
-                  programs from Kids Galaxy
-                  <Link to='/createaccount'>
-                  <span class="blue"> Sign Up here.</span>
-                  </Link>                
-                </p>
-          </div>
-        </div>
-        <div class="middleLine d-md-none d-lg-block"></div>
-        <div class= "mainRight col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
             <div class="card loginCard edu_card">
             <div class="cardContent">
               <div class="title edu_title">
@@ -89,9 +73,6 @@ const EducationalDetails = () => {
               </div>
             </div>
           </div>
-        </div>
-    </div>
-      </div>
    )
 }
 

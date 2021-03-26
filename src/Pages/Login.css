@@ -5,9 +5,6 @@ input {
 /* navbar start */
 
 /* navbar end */
-.signup-underline:hover {
-  text-decoration: none;
-}
 .overlay {
   width: 100%;
   object-fit: contain;
@@ -32,24 +29,23 @@ input {
   width: 15vw;
 }
 /* main Left start */
-.mainLeft {
+.mainLeftLogin{
   text-align: center;
-  margin-top: 3rem;
 }
-.mainLeft img {
+.mainLeftLogin img {
   width: 70%;
   position: relative;
   margin: 0 auto;
   object-fit: contain !important;
 }
-.mainLeft p {
-  width: 700px;
+.mainLeftLogin p {
+  width: 70%;
   margin: 0 auto;
-  font-size: 27px;
+  font-size: 1.2rem;
   margin-top: 20px;
 }
-.mainLeftContent {
-  width: 90%;
+.mainLeftContentLogin{
+  /*width: 90%;*/
   margin: 0 auto;
   position: absolute;
   top: 50%;
@@ -57,19 +53,19 @@ input {
   transform: translateY(-50%);
 }
 /* main Left end */
-.middleLine {
+.middleLineLogin {
   border-right: 1px solid grey;
   height: 100%;
   width: 1px;
   position: absolute;
-  right: 0;
+  right: 50%;
 }
-/* mainRight start */
-.mainRight {
+/* mainRightLoginstart */
+.mainRightLogin {
   text-align: center;
 }
-.loginCard {
-  width: 600px;
+.loginCardLogin {
+  width: 75%;
   margin: 0 auto;
   top: 50%;
   -ms-transform: translateY(-50%);
@@ -82,7 +78,7 @@ input {
     0 8.5px 17.6px rgba(0, 0, 0, 0.048), 0 15.9px 33px rgba(0, 0, 0, 0.058),
     0 38px 79px rgba(0, 0, 0, 0.08);
 }
-.cardContent {
+.cardContentLogin {
   display: flex;
   flex-direction: column;
   width: 90%;
@@ -94,11 +90,11 @@ input {
   border-bottom: 0.2vh solid rgb(175, 175, 175);
 }
 .card .title h1 {
-  font-size: 1rem;
+  font-size: 50px;
   color: #57bb71;
   font-weight: 600;
-  font-family: "Montserrat";
   padding: 1%;
+  margin-top: 1rem;
 }
 .inputs {
   width: 80%;
@@ -114,20 +110,13 @@ input {
   margin-bottom: 1%;
   margin-top: 5%;
   font-size: 22px;
-  font-family: "Montserrat";
-  font-weight: 500;
 }
-.inputs input {
-  width: 100%;
-  padding: 0.4rem 1rem;
-  border-radius: 5vh;
-  font-size: 18px;
-  border: 0.1vw solid rgb(105, 105, 105);
-}
+
 .checkbox {
-  width: 73%;
+  /* width: 73%; */
   margin: 0 auto;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   margin-top: 1.6%;
   margin-bottom: 2.5%;
@@ -148,6 +137,7 @@ input {
 }
 .rememberBox p {
   margin-left: 5px;
+  margin-right: 5px;
 }
 
 .login {
@@ -166,8 +156,6 @@ input {
   font-weight: 700;
   color: white;
   transition: all 0.5s;
-  margin-top: 0.8rem;
-  font-family: "Montserrat";
 }
 .loginBtn:hover {
   color: rgb(87, 187, 113);
@@ -183,23 +171,19 @@ input {
   margin-bottom: 1.5%;
 }
 .hero .hr {
-  width: 33%;
+  width: 30%;
   border-top: 0.1vh solid rgb(161, 161, 161);
   position: relative;
 }
 .hero p {
-  font-size: 12px;
-  margin-bottom: 3px;
-  font-weight: 500;
-  font-family: "Montserrat";
+  font-size: 18px;
+  margin-bottom: 0;
 }
 .faceG img {
-  width: 10%;
+  width: 12%;
 }
 .faceG img:last-of-type {
   margin-left: 2%;
-  box-shadow: 2px 2px 5px grey;
-  border-radius: 50%;
 }
 
 .faceG p {
@@ -208,222 +192,651 @@ input {
 .blue {
   color: #3fa7d6;
   font-weight: 500;
-  padding-left: 0.2rem;
 }
 .orLogin {
-  margin-bottom: 5%;
+  margin-bottom: 2%;
+  margin-top: 2%;
 }
-/* mainRight end */
 
-@media screen and (max-width: 1500px) {
-  .mainLeft p {
-    width: 100%;
-    font-size: 18px;
-    font-family: "Montserrat";
+/* Structure */
+
+.login_btn {
+  background: #fff;
+  height: 2.75rem;
+  margin: 1em auto auto;
+}
+
+@media (min-width: 768px) {
+  .login_btn {
+    background: #fff;
+    bottom: 2.75rem;
+    left: 2.55rem;
+    height: 2.75rem;
+    padding: 0 3rem;
+    /*position: absolute;*/
   }
-  .mainLeft img {
-    width: 60%;
+}
+
+input[type=email],
+input[type=password] {
+  height: 1.5rem;
+  margin: 0 0 1rem;
+  width: 100%;
+}
+
+form {
+  overflow: hidden;
+  /* padding: 10%; */
+  position: relative;
+  /* width: 85%; */
+}
+
+@media (min-width: 768px) {
+  form {
+    float: left;
+    height: 78%;
+    padding: 2% 6%;
+    /* width: 38%; */
   }
-  .loginCard {
-    width: 80%;
+}
+
+main {
+  margin: 2% auto!important;
+  overflow: hidden;
+  position: relative;
+  width: 80%;
+}
+
+@media (min-width: 768px) {
+  main {
+    /*height: 21.25rem;*/
+    left: 50%;
+    margin: auto;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    /*width: 42.5rem;*/
+  }
+}
+
+.loginInput {
+  background: none;
+  border: none;
+  border-bottom: 2px solid #57bb71;
+  box-sizing: border-box;
+  outline: none;
+}
+
+input[type=email]:required,
+input[type=password]:required {
+  box-shadow: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+.login_btn {
+  background: #f37b56!important;
+  border: none!important;
+  outline: none!important;
+  color: #fff!important;
+  padding: 0 2rem!important;
+  width: 80%;
+}
+
+.login_btn:hover,
+.login_btn:focus {
+  background: #f79577;
+  cursor: pointer;
+  outline: none;
+  border-radius: 0;
+}
+
+.inputs--filled label {
+  transform: translate(0, 0);
+}
+
+.inputs--invalid input {
+  animation: shake 0.3s cubic-bezier(.36,.07,.19,.97) both;
+  background: url(//my-assets.netlify.com/codepen/dailyui-001/ico-invalid.svg) center right no-repeat;
+  border-bottom: 2px solid #f37b56;
+  box-shadow: none;
+  color: #f37b56;
+  transform: translate3d(0, 0, 0);
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  33% {
+    transform: translate3d(-6px, 0, 0);
+  }
+
+  66% {
+    transform: translate3d(6px, 0, 0);
+  }
+}
+
+.inputs--invalid label {
+  color: #f37b56;
+}
+
+.loginLabel {
+  display: inline-block;
+  transform: translate(0, 1.25rem);
+  transition: 0.15s;
+}
+
+main {
+  background: #f9f6ed;
+  border-radius: 0.25rem;
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.1);
+}
+
+.text-body {
+  color: #354c58;
+  font: 700 5rem 'Montserrat', sans-serif;
+}
+
+.text-small-uppercase-login {
+  color: #57bb71;
+  font: 700 1.5rem 'Montserrat';
+  /* letter-spacing: 0.2rem; */
+  /* text-transform: uppercase; */
+  float: left;
+}
+
+.text-small-uppercase-button-login {
+  /* color: #57bb71!important; */
+  font: 700 1.5rem 'Montserrat'!important;
+  letter-spacing: 0.2rem!important;
+  /* text-transform: uppercase; */
+  /* float: left; */
+}
+
+/* Background */
+.green-bg {
+  background-color: #57BB72;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+}
+.white-bg {
+  background-color: white;
+  position: absolute;
+  opacity: 0.85;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Thought of the day */
+.quote {
+  position: relative;
+  color: white;
+  font-family: 'Montserrat';
+  font-size: 15px;
+  text-align: center;
+  padding: 3px 0px 3px 0px;
+}
+.quote-bar {
+  position: relative;
+  background-color: #262e42;
+  border-radius: 0px 0px 15px 15px;
+}
+
+/* Navbar */
+.nav-bar {
+  position: relative;
+  padding-top: 0.2rem;
+  margin: 0px 5px 0px 5px;
+}
+.nav-left{
+  margin: auto;
+  width: auto;
+  margin-left: 0px;
+  padding-left: 0px;
+}
+.nav-logo {
+  margin: auto;
+  width: 200px;
+  height: auto;
+  padding-top:2px;
+}
+.nav-center{
+  margin: auto;
+  width: auto;
+  text-align: center;
+  padding: 7px 0px 0px 90px;
+  font-family: 'montserrat';
+  font-weight: 500;
+}
+.label-1 {
+  text-decoration: none;
+  color: #262e42;
+  margin-right: 35px;
+}
+.label-2 {
+  text-decoration: none;
+  color: #262e42;
+}
+.label-3 {
+  text-decoration: none;
+  color: #262e42;
+  margin-left: 35px;
+}
+.nav-right{
+  margin: auto;
+  width: auto;
+  text-align: right;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding: 0px;
+}
+.sign-in {
+  text-decoration: none;
+  color: #262e42;
+  padding-right: 20px;
+}
+.request-demo {
+  text-decoration: none;
+  color: white;
+  background-color: crimson;
+  padding: 8px 8px;
+  border-radius: 7px;
+  font-weight: 500;
+}
+.request-demo:hover {
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgb(0 0 0 / 0%);
+  -webkit-transition-duration: 0.6s;
+  transition-duration: 0.6s;
+  -webkit-transition-property: box-shadow;
+  transition-property: box-shadow;
+  background-color: transparent;
+  color: crimson;
+  font-weight: 500;
+  box-shadow: inset 0 0 0 3px  crimson, 0 0 1px rgb(0 0 0 / 0%);
+}
+.nav-ham {
+  width: auto;
+  margin: 9px 0px 0px 0px;
+  padding: 0px 0px 0px 20px;
+}
+.ham{
+  width: 30px;
+  height: 5px;
+  background-color: #262e42;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+.material-icons {
+  width: auto;
+  margin: auto;
+  margin: 10px 0px 0px 0px;
+  padding-right: 5px;
+  font-size: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #262e42;
+}
+.person-icon {
+  width: auto;
+  margin: auto;
+  margin-right: 0px;
+  margin-left: 0px;
+  padding-right: 2px;
+  text-decoration: none;
+  color: #262e42;
+}
+
+/* Breakpoints */
+@media screen and (min-width: 1439.98px) {
+  /*.nav-bar {
+      padding-top: 20px;
+      margin: 0px 15px 0px 15px;
+  }*/
+  .nav-logo {
+      width: 250px;
+      height: auto;
+      padding-top: 0px;
+  }
+  /*.sign-in {
+      font-size: 25px;
+}         
+  .material-icons {
+      font-size: 30px;
+      margin-top: 10px;
+      padding-right: 15px;
+  }
+  .person-icon {
+      padding-right: 2px;
+  }
+  .request-demo {
+      font-size: 22px;
+      padding: 12px 12px;
+  }
+  .nav-center {
+      font-size: 22px;
+      padding-left: 163px;
+      padding-top: 3px;
+  }*/
+}
+@media screen and (max-width: 1399.98px){
+  
+}
+@media screen and (max-width: 1199.98px){
+  .material-icons {
+      margin-top: 10px;
+  }
+  .checkbox p {
+  font-size: 17px!important;
+}
+}
+@media screen and (max-width: 991.98px){
+.mainLeftLogin {
+  display: none;
+}
+}
+@media screen and (max-width: 1024.98px) and (orientation: portrait) {
+  
+}
+
+@media screen and (min-width: 991px) and (max-width: 1046px) {
+  .text-small-uppercase-login {
+    font: 700 1.2rem 'Montserrat'!important;
+  }
+
+  .text-small-uppercase-button-login {
+    font: 700 1.2rem 'Montserrat'!important;
   }
   .card .title h1 {
-    font-size: 40px;
+    font-size: 45px!important;
   }
-  .CreatedAccount-half-inputs input .inputs input {
-    padding: 2.1%;
+  form {
+      padding: 10px;
   }
-  .inputs p {
-    font-size: 20px;
-    margin-top: 2%;
+  .hero p {
+    font-size: 15px!important;
   }
-  .inputs input {
-    font-size: 18px;
-  }
-
-  .checkbox {
-    margin-top: 1%;
-    margin-bottom: 2%;
+  .faceG p {
+    font-size: 17px!important;
   }
   .checkbox p {
-    font-size: 20px;
-  }
-  .login {
-    margin-bottom: 10px;
+    font-size: 15px!important;
   }
 }
 
-@media screen and (max-width: 1400px) {
-  .loginCard {
-    width: 70%;
+@media screen and (max-width: 768.98px) and (orientation: portrait) {
+}
+@media screen and (max-width: 625.98px) {
+  /*.person-icon {
+      padding-right: 0px;
+  }*/
+  .nav-logo {
+      width: 180px;
   }
-  .mainLeft img {
-    width: 400px;
+  /*.nav-ham {
+      margin: 7px 0px 0px 0px;
+  }*/
+  .text-small-uppercase-login {
+  font: 700 1.2rem 'Montserrat'!important;
+}
+
+.text-small-uppercase-button-login {
+  font: 700 1.2rem 'Montserrat'!important;
+}
+.card .title h1 {
+    font-size: 45px!important;
   }
-  .navbarStyle img {
-    margin-top: 1.5rem;
-    width: 200px;
-    height: 40px;
+  form {
+    padding: 10px;
+  }
+  .hero p {
+  font-size: 15px!important;
+}
+.faceG p {
+  font-size: 17px!important;
+}
+.checkbox p {
+  font-size: 15px!important;
+}
+}
+@media screen and (max-width: 575.98px) {
+  /*.quote {
+      color: white;
+      font-family: 'Montserrat';
+      font-size: 12px;
+      text-align: center;
+      padding: 3px 0px 3px 0px;
+  }
+  .nav-bar {
+      padding-top: 8px;
+      margin: 0px 0px 0px 0px;
+  }*/
+  .nav-logo {
+      width: 150px;
+      height: auto;
+      padding-top: 4px;
+  }
+  /*.person-icon {
+      display: none;
+  }
+  .sign-in {
+      display: none;
+  }
+  .request-demo {
+      font-size: 12px;
+  }
+  .material-icons {
+      padding-right: 7px;
+      margin-top: 8px;
+      font-size: 22px;
+  }
+  .nav-ham {
+      margin-top: 6px;
+      padding-left: 12px;
+  }
+  .ham {
+      width: 25px;
+      margin-bottom: 4px;
+  }*/
+}
+
+@media screen and (max-width: 485px) {
+  .loginCardLogin {
+      width: 90%!important;
+  }
+}
+
+@media screen and (max-width: 415px) {
+  .loginCardLogin {
+      width: 95%!important;
+  }
+}
+
+@media screen and (max-width: 377px) {
+  /*.quote {
+      color: white;
+      font-family: 'Montserrat';
+      font-size: 12px;
+      text-align: center;
+      padding: 3px 0px 3px 0px;
+  }
+  .nav-bar {
+      padding-top: 5px;
+      margin: 0px 0px 0px 0px;
+  }*/
+  .nav-logo {
+      width: 130px;
+      height: auto;
+      margin-top: 4px;
+  }
+  .checkbox p {
+  font-size: 12px!important;
+}
+  /*.person-icon {
+      display: none;
+  }
+  .sign-in {
+      display: none;
+  }
+  .request-demo {
+      font-size: 10px;
+  }
+  .material-icons {
+      padding-right: 7px;
+      margin-top: 10px;
+      font-size: 20px;
+  }
+  .nav-ham {
+      margin-top: 8px;
+      padding-left: 10px;
+  }
+  .ham {
+      width: 23px;
+      margin-bottom: 3px;
+  }*/
+}  
+
+@media screen and (max-width: 355px) {
+  .text-small-uppercase-login {
+    font: 700 0.9rem 'Montserrat'!important;
   }
 
+  .text-small-uppercase-button-login {
+    font: 700 0.9rem 'Montserrat'!important;
+  }
   .card .title h1 {
-    font-size: 2.5vw;
-    padding-top: 1.4rem;
-    font-weight: 600;
+    font-size: 40px!important;
   }
-  .inputs input {
-    font-size: 16px;
+  form {
+      padding: 7px;
   }
-  .inputs p {
-    padding-top: 0.7rem;
-    font-size: 1vw;
-    padding-bottom: 0.3rem;
-    font-weight: 500;
-  }
-  .checkbox {
-    margin-top: 5%;
-    margin-bottom: 3%;
-  }
-  .checkbox p {
-    font-size: 0.8vw;
-    font-family: "Montserrat";
-    font-weight: 500;
-  }
-  .checkbox .blue {
-    font-weight: 600;
-  }
-  .login {
-    margin-bottom: 5%;
-  }
-  .loginBtn {
-    font-size: 1.3vw;
+  .hero p {
+    font-size: 10px!important;
   }
   .faceG p {
-    font-size: 0.8rem;
-    margin-top: 0.7rem;
-    font-weight: 400;
-    font-family: "Montserrat";
+    font-size: 10px!important;
+  }
+  .checkbox p {
+    font-size: 10px!important;
+  }
+  .loginCardLogin {
+      width: 98%!important;
+  }
+  .login_btn {
+    padding: 0 !important;
+    height: 2.5rem!important;
   }
 }
 
-@media screen and (max-width: 1135px) {
-  .inputs {
-    width: 100%;
+@media screen and (max-width: 320.98px) {
+  /*.quote {
+      color: white;
+      font-family: 'Montserrat';
+      font-size: 12px;
+      text-align: center;
+      padding: 3px 0px 3px 0px;
   }
-  .checkbox {
-    width: 100%;
+  .nav-bar {
+      padding-top: 4px;
+      margin: 0px;
+  }*/
+  .nav-logo {
+      width: 130px;
+      height: auto;
+      margin-top: 0px;
   }
-  .login {
-    width: 100%;
+  .text-small-uppercase-login {
+    font: 700 0.9rem 'Montserrat'!important;
   }
-  .mainLeft img {
-    width: 100%;
-  }
-}
 
-@media screen and (max-width: 992px) {
-  .mainLeft {
-    display: none;
-  }
-  .loginCard {
-    width: 600px;
+  .text-small-uppercase-button-login {
+    font: 700 0.9rem 'Montserrat'!important;
   }
   .card .title h1 {
-    font-size: 40px;
+    font-size: 40px!important;
   }
-  .inputs input {
-    padding: 2.1%;
+  form {
+      padding: 7px;
   }
-  .inputs p {
-    font-size: 20px;
-    margin-top: 2%;
-  }
-  .checkbox {
-    flex-direction: initial;
-    margin-top: 1%;
-    margin-bottom: 2%;
-  }
-  .checkbox p {
-    font-size: 20px;
-  }
-  .login {
-    margin-bottom: 10px;
-  }
-  .loginBtn {
-    font-size: 22px;
+  .hero p {
+    font-size: 10px!important;
   }
   .faceG p {
-    font-size: 22px;
+    font-size: 10px!important;
   }
+  .checkbox p {
+    font-size: 10px!important;
+  }
+  .loginCardLogin {
+      width: 98%!important;
+  }
+  .login_btn {
+    padding: 0 !important;
+    height: 2rem!important;
+  }
+  /*.person-icon {
+      display: none;
+  }
+  .sign-in {
+      display: none;
+  }
+  .request-demo {
+      display: none;
+  }
+  .material-icons {
+      padding-right: 0px;
+      margin-top: 6px;
+      font-size: 20px;
+  }
+  .nav-ham {
+      margin-top: 5px;
+      padding-left: 10px;
+  }
+  .ham {
+      width: 23px;
+      margin-bottom: 3px;
+  }*/
 }
-@media screen and (max-width: 900px) {
-  .checkbox {
-    align-items: initial;
-    width: 90%;
+@media screen and (max-width: 240.98px) {
+  /*.quote {
+      color: white;
+      font-family: 'Montserrat';
+      font-size: 11px;
+      text-align: center;
+      padding: 3px 0px 3px 0px;
   }
-  .navbarStyle img {
-    width: 80%;
+  .nav-bar {
+      padding-top: 2px;
+      margin: 0px 0px 0px 0px;
   }
-}
-@media screen and (max-width: 768px) {
-  .navbarStyle {
-    padding-top: 5%;
+  .nav-left {
+      padding-right: 0px;
+  }*/
+  .nav-logo {
+      width: 110px;
+      height: auto;
+      margin-top: 0px;
   }
-  .navbarStyle img {
-    text-align: center;
-  }
-}
-@media screen and (max-width: 660px) {
-  .loginCard {
-    width: 100%;
-  }
+  
 }
 
-@media screen and (max-width: 460px) {
-  .checkbox {
-    text-align: left;
-    /* flex-direction: column; */
-  }
-  .checkbox p {
-    font-size: 18px;
-  }
-  .loginBtn {
-    font-size: 20px;
-    padding-top: 6px;
-    padding-bottom: 6px;
-  }
-  .faceG p {
-    font-size: 18px;
-  }
-  .orLogin {
-    margin-bottom: 10px;
-  }
-  .rememberBox {
-    width: 50%;
-  }
+@media screen and (min-width: 767px) and (max-width: 991px) {
+.loginCardLogin {
+  width: 60%!important;
 }
-@media screen and (max-width: 375px) {
-  .mainRight {
-    margin-top: 10vh;
-  }
-  .checkbox {
-    width: 98%;
-    margin: 10px auto;
-  }
 }
-@media screen and (max-width: 320px) {
-  .mainRight {
-    margin-top: 20vh;
-  }
-  .inputs p {
-    font-size: 18px;
-  }
-  .loginBtn {
-    font-size: 18px;
-  }
-  .checkbox p {
-    font-size: 16px;
-  }
-  .hr {
-  }
+
+@media screen and (min-width: 991px) and (max-width: 1250px) {
+.mainLeftLogin img {
+  width: 60%!important;
+  right: 15%!important;
+}
+.mainLeftLogin p {
+  width: 60%!important;
+  margin-left: 5%!important;
+}
 }

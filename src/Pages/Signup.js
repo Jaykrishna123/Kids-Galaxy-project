@@ -67,40 +67,40 @@ const Signup = () => {
   };
 
   return (
-    <div className="overlay container-fluid">
-      <nav className="navbar navbarStyle">
-        <div className="container-fluid">
-          <Link to="/">
-            <img
-              src="Images/logo.png"
-              alt="Kids Galaxy Logo"
-              className="d-inline-block align-top"
-            />
-          </Link>
-        </div>
-      </nav>
-      {/* <!-- Image and text -->
-      {/* <img className="overlayImg" src="Images/Overlay Shapes.png" alt="" /> */}
-      <div className="row mainContent">
-        <div className="mainLeft col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
-          <div className="mainLeftContent">
-            <img src="Images/Sign Up Illustration.png" alt="" />
-            <p>
-              If you already have an account
-              <a href="/login"  className="login-underline">
-                <span className="blue"> Log in here</span>
-             </a>
-            </p>
+
+    <div>
+    <div class="green-bg"></div>                                            
+    <div class="white-bg"></div>
+
+    <div class="container-fluid">
+          <div class="row nav-bar">
+              <div class="col-3 nav-left">
+              <Link to="/">
+                <img src="Images/navbar logo.svg" alt="kg-logo" class="nav-logo" />
+            </Link>
+              </div>
           </div>
-          <div className="middleLine"></div>
+      </div>
+
+       <div class="row container-fluid mainContent">
+      <div class= "mainLeft col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+          <div class="mainLeftContent d-md-none d-lg-block">
+              <img src="Images/Sign Up Illustration.svg" alt="" />
+              <p>
+                  If you already have an account
+                  <a href="/login"  className="login-underline">
+                    <span className="blue"> Log in here</span>
+                </a>
+              </p>
         </div>
-        {/* mainLeft end */}
-        <div className="mainRight col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
-          {renderSwitch(step)}
-        </div>
-        {/* mainRight end */}
+      </div>
+      <div class="middleLine d-md-none d-lg-block"></div>
+      <div class= "mainRight col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+      {renderSwitch(step)}
       </div>
     </div>
+    </div>  
+
   );
 };
 

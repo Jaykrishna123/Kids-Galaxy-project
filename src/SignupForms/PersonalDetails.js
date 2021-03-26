@@ -104,7 +104,7 @@ const PersonalDetails = ({
             <label
               for="lname"
               class="text-small-uppercase"
-              tyle={lastName ? { transform: "translate(0,0)" } : null}
+              style={lastName ? { transform: "translate(0,0)" } : null}
             >
               Last Name
             </label>
@@ -142,32 +142,32 @@ const PersonalDetails = ({
                 </p>
               })}
         </span>
-        {/* <div>
+        <div>
           <Link to='/createaccount'>
           <span class="buttons">
-          <button type="button" class="btn btn-sm text-small-uppercase-button login_btn back_btn" id="submit">Back</button>
+          <button type="button" class="btn btn-sm text-small-uppercase-button login_btn back_btn" id="submit" onClick={previousStep}>Back</button>
           </span>
           </Link>
           <Link to='/educationaldetails'>
           <span>
-          <button type="button" class="btn btn-sm text-small-uppercase-button login_btn back_btn" id="submit">Next</button>
+          <button type="button" class="btn btn-sm text-small-uppercase-button login_btn back_btn" id="submit" onClick={handleSubmit}>Next</button>
           </span>
           </Link>
-      </div> */}
+      </div>
       </form>
-        <div className="login personalDetails_1-loginBtnDiv">
+        {/* <div className="login personalDetails_1-loginBtnDiv">
           <button className="loginBtn backBtn" onClick={previousStep}>
             Back
           </button>
           <button className="loginBtn" onClick={handleSubmit}>
             Submit
           </button>
-        </div>
-        <p >
+        </div> */}
+        {/* <p >
           <input type="checkbox" id="accept-checkbox"/>
           I accept the
           <button class="terms-of-service">Terms of Service</button>
-        </p>
+        </p> */}
         <div className="orLogin">
           <div className="hero">
             <span className="hr"></span>

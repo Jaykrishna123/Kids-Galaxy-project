@@ -62,42 +62,39 @@ const Login = () => {
   }
 
   return (
-    <div className="overlay container-fluid">
-      <nav className="navbar navbarStyle">
-        <div className="container-fluid">
-          <Link to="/">
-            <img
-              src="Images/logo.png"
-              alt="Kids Galaxy Logo"
-              className="d-inline-block align-top nav-homeBtn-img"
-            />
-          </Link>
+
+<div>
+      <div class="green-bg"></div>                                            
+    <div class="white-bg"></div>
+
+    <div class="container-fluid">
+        <div class="row nav-bar">
+            <div class="col-3 nav-left">
+            <Link to="/">
+                <img src="Images/navbar logo.svg" alt="kg-logo" class="nav-logo" />
+            </Link>
+            </div>
         </div>
-      </nav>
-      {/* <!-- Image and text -->
-      {/* <img className="overlayImg" src="Images/Overlay Shapes.png" alt="" /> */}
-      <div className="row mainContent">
-        <div className="mainLeft col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
-          <div className="mainLeftContent">
-            <img src="Images/Login Illustration.png" alt="" />
-            <p>
-              To get exciting discounts, offers, free study resources, special
-              programs from Kids Galaxy
-              <span className="blue"> Sign Up here.</span>
-            </p>
+    </div>
+
+      <div class="row container-fluid mainContent">
+        <div class= "mainLeftLogin col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+            <div class="mainLeftContentLogin d-md-none d-lg-block">
+                <img src="Images/Login Illustration.svg" alt="" />
+                <p>
+                  To get exciting discounts, offers, free study resources, <br /> special
+                  programs from Kids Galaxy
+                  <span class="blue"> Sign Up here.</span>
+                </p>
           </div>
-          <div className="middleLine"></div>
         </div>
-        {/* mainLeft end */}
-
-
-        <div className="mainRight col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
-          <div className="card loginCard">
-            <div className="cardContent">
-              <div className="title">
-                <h1>Log in</h1>
+        <div class="middleLineLogin d-md-none d-lg-block"></div>
+        <div class= "mainRightLogin col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+            <div class="card loginCardLogin">
+            <div class="cardContentLogin">
+              <div class="title">
+                <h1>Log In</h1>
               </div>
-
               <form>
                 <span>
                   <label for="email" class="text-small-uppercase-login loginLabel"
@@ -130,76 +127,38 @@ const Login = () => {
                 </div>
                 <span>
                   {/* <input class="text-small-uppercase-button" id="submit" type="submit" value="Login" /> */}
-                  {/* <button type="button" class="btn btn-sm text-small-uppercase-button-login login_btn" id="submit">Login</button> */}
+                  <button type="button" class="btn btn-sm text-small-uppercase-button-login login_btn" id="submit" onClick={handleLogin}>Login</button>
                 </span>
               </form>
 
-
-
-              {/* <div className="inputs">
-                <div className="input1">
-                  <p>E-mail</p>
-                  <input
-                    type="email"
-                    placeholder="Enter your Email"
-                    onChange={(e) => setLoginUsername(e.target.value)}
-                    value={loginUsername}
-                  />
-                  {Object.keys(loginUsernameErr).map((key) => {
-                    return <div style={{color: 'red', fontSize: '14px'}}>
-                      {loginUsernameErr[key]}
-                    </div>
-                  })}
-                </div>
-                <div className="input2">
-                  <p>Password</p>
-                  <input
-                    type="password"
-                    placeholder="Enter your Password"
-                    onChange={(e) => setLoginPassword(e.target.value)}
-                    value={loginPassword}
-                  />
-                  {Object.keys(loginPasswordErr).map((key) => {
-                    return <div style={{color: 'red', fontSize: '14px'}}>
-                      {loginPasswordErr[key]}
-                    </div>
-                  })}
-                </div>
-              </div> */}
-              <div className="checkbox">
-                <div className="rememberBox">
-                  <input type="checkbox" />
-                  <p>Remember me</p>
-                </div>
-                <p className="blue">Forgot Password</p>
-              </div>
-              <div className="login">
-                <button className="loginBtn" onClick={handleLogin}>
-                  Log in
-                </button>
-              </div>
-              <div className="orLogin">
-                <div className="hero">
-                  <span className="hr"></span>
+              <div class="orLogin">
+                <div class="hero">
+                  <span class="hr"></span>
                   <p>Or log in using</p>
-                  <span className="hr"></span>
+                  <span class="hr"></span>
                 </div>
-                <div className="faceG">
-                  <img src="Images/fb.png" alt="" />
-                  <img src="Images/google.png" alt="" />
+                <div class="faceG">
+                  <img src="Images/Facebook.svg" alt="" />
+                  <img src="Images/Gmail Icon.svg" alt="" />
                   <p>
                     New User?
-                    <Link to="/signup">
-                      <span className="blue"> Sign Up</span>
-                    </Link>
+                    <a href="{}">
+                      <Link to='/signup'>
+                      <span class="blue"> Sign Up</span>
+                      </Link>
+                    </a>
                   </p>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
+         </div>
     </div>
+   </div>
+
+
+
+
   );
 };
 
