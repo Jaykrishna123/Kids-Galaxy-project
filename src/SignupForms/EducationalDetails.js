@@ -2,7 +2,9 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import './Signup.css'
 
-const EducationalDetails = () => {
+const EducationalDetails = ({
+  previousStep
+}) => {
    return (
             <div class="card loginCard edu_card">
             <div class="cardContent">
@@ -40,11 +42,10 @@ const EducationalDetails = () => {
                   </div>
               </div>
             </span>
-            <Link to='/personaldetails'>
+
             <span class="buttons">
-            <button type="button" class="btn btn-sm text-small-uppercase-button login_btn back_btn edu_text" id="submit">Back</button>
+            <button type="button" class="btn btn-sm text-small-uppercase-button login_btn back_btn edu_text" id="submit" onClick={previousStep}>Back</button>
             </span>
-            </Link>
             <Link to=''>
             <span>
             <button type="button" class="btn btn-sm text-small-uppercase-button login_btn back_btn edu_text" id="submit">Submit</button>

@@ -143,11 +143,11 @@ const PersonalDetails = ({
               })}
         </span>
         <div>
-          <Link to='/createaccount'>
+          {/* <Link to='/createaccount'> */}
           <span class="buttons">
           <button type="button" class="btn btn-sm text-small-uppercase-button login_btn back_btn" id="submit" onClick={previousStep}>Back</button>
           </span>
-          </Link>
+          {/* </Link> */}
           <Link to='/educationaldetails'>
           <span>
           <button type="button" class="btn btn-sm text-small-uppercase-button login_btn back_btn" id="submit" onClick={handleSubmit}>Next</button>
