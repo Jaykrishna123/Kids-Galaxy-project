@@ -167,8 +167,8 @@ input {
 .RequestCard {
   width: 75%;
   margin: 0 auto;
-  /* top: 50%;
-  -ms-transform: translateY(-50%);
+  top: 50%;
+  /* -ms-transform: translateY(-50%);
   transform: translateY(-50%); */
   border-radius: 3% !important;
   background-color: #f9f9f9 !important;
@@ -201,6 +201,61 @@ input {
   color: #3fa7d6;
   font-weight: 500;
 }
+
+.buttons {
+  margin-right: 0.5rem;
+}
+
+.back_btn {
+  width: 45%!important;
+}
+
+.inputs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0;
+  text-align: left;
+}
+.req_inputs {
+  margin-top: 4rem!important;
+  margin-left: 1rem!important;
+}
+
+.EducationalDetailsBoard {
+  display: flex;
+  /* margin: 2.5rem 0 0.8rem 0; */
+}
+.EducationalDetailsBoard_board {
+  padding: 0.5rem 0.8rem;
+  border-radius: 30px;
+  /*border: 2px solid #262e42;*/  
+  border: 2px solid rgb(87, 187, 113);
+  margin-right: 0.5rem;
+  margin-top: 2%;
+  cursor: pointer;
+  color: rgb(87, 187, 113);
+  background-color: transparent;
+  text-align: center;
+}
+.EducationalDetailsBoard_board:hover {
+  background-color: rgb(87, 187, 113);
+  color: white;
+}
+.EducationalDetailsBoard_board p {
+  margin: 0;
+  font: 500 1.2rem 'Montserrat';
+}
+.EducationalDetails_class_select {
+  padding: 15px;
+  width: 100%;
+  font-size: 17px;
+  border-radius: 30px;
+  outline: none;
+}
+
+
 
 /* Structure */
 
@@ -528,11 +583,48 @@ main {
   }*/
 }
 @media screen and (max-width: 1399.98px){
-  
+  .request_btn {
+    padding: 0!important;
+  }
 }
+
+@media screen and (min-width: 1200px) and (max-width: 1377px) {
+  .RequestCard {
+    width: 90%!important;
+  }
+  }
+  
+  @media screen and (min-width: 992px) and (max-width: 1200px) {
+  .RequestCard {
+    width: 95%!important;
+  }
+  .req_text{
+      font: 700 1rem 'Montserrat'!important;
+    }
+    .text-small-uppercase-request {
+      font: 700 1rem 'Montserrat'!important;
+    }
+  
+    .text-small-uppercase-button-request {
+      font: 700 1rem 'Montserrat'!important;
+    }
+    .card .request-title h1 {
+      font-size: 40px!important;
+    }
+    .RequestCard {
+      width: 85%;
+    }
+    .EducationalDetailsBoard_board p {
+    font: 600 1rem 'Montserrat'!important;
+  }
+  }
+
 @media screen and (max-width: 1199.98px){
   .material-icons {
       margin-top: 10px;
+  }
+  .req_inputs {
+    margin-top: 3.5rem;
   }
 }
 @media screen and (max-width: 991.98px){
@@ -562,6 +654,29 @@ main {
 
 @media screen and (max-width: 768.98px) and (orientation: portrait) {
 }
+
+
+@media screen and (min-width: 767px) and (max-width: 992px) {
+  .EducationalDetailsBoard_board p {
+    font: 600 1.2rem 'Montserrat'!important;
+  }
+  .request_btn {
+    padding: 0!important;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 766px) {
+  .req_text{
+      font: 700 1rem 'Montserrat'!important;
+    }  
+    .EducationalDetailsBoard_board p {
+    font: 600 1rem 'Montserrat'!important;
+  }
+  .request_btn {
+    padding: 0!important;
+  }
+}
+
 @media screen and (max-width: 625.98px) {
   /*.person-icon {
       padding-right: 0px;
@@ -575,6 +690,9 @@ main {
   .text-small-uppercase-request {
   font: 700 1.2rem 'Montserrat'!important;
 }
+.EducationalDetailsBoard_board p {
+  font: 600 1rem 'Montserrat'!important;
+}
 
 .text-small-uppercase-button-request {
   font: 700 1.2rem 'Montserrat'!important;
@@ -584,6 +702,9 @@ main {
   }
   form {
     padding: 10px;
+  }
+  .request_btn {
+    padding: 0!important;
   }
 }
 @media screen and (max-width: 575.98px) {
@@ -602,6 +723,9 @@ main {
       width: 150px;
       height: auto;
       padding-top: 4px;
+  }
+  .request_btn {
+    padding: 0!important;
   }
   /*.person-icon {
       display: none;
@@ -627,9 +751,18 @@ main {
   }*/
 }
 
+@media screen and (min-width: 513px) and (max-width: 533px) {
+  .req_board {
+    padding: 0.5rem;
+  }
+}
+
 @media screen and (max-width: 485px) {
   .RequestCard {
       width: 90%!important;
+  }
+  .request_btn {
+    padding: 0!important;
   }
 }
 
@@ -640,47 +773,23 @@ main {
   .card .request-title h1 {
     font-size: 35px!important;
   }
+  .request_btn {
+    padding: 0!important;
+  }
 }
 
 @media screen and (max-width: 377px) {
-  /*.quote {
-      color: white;
-      font-family: 'Montserrat';
-      font-size: 12px;
-      text-align: center;
-      padding: 3px 0px 3px 0px;
-  }
-  .nav-bar {
-      padding-top: 5px;
-      margin: 0px 0px 0px 0px;
-  }*/
   .nav-logo {
       width: 130px;
       height: auto;
       margin-top: 4px;
   }
-  /*.person-icon {
-      display: none;
+  .EducationalDetailsBoard_board p {
+    font: 600 0.55rem 'Montserrat'!important;
   }
-  .sign-in {
-      display: none;
+  .request_btn {
+    padding: 0!important;
   }
-  .request-demo {
-      font-size: 10px;
-  }
-  .material-icons {
-      padding-right: 7px;
-      margin-top: 10px;
-      font-size: 20px;
-  }
-  .nav-ham {
-      margin-top: 8px;
-      padding-left: 10px;
-  }
-  .ham {
-      width: 23px;
-      margin-bottom: 3px;
-  }*/
 }  
 
 @media screen and (max-width: 355px) {
@@ -703,6 +812,36 @@ main {
   .request_btn {
     padding: 0 !important;
     height: 2.5rem!important;
+  }
+  .EducationalDetailsBoard_board {
+    padding: 0.3rem!important;
+  }
+  .EducationalDetailsBoard_board p {
+    font: 600 0.8rem 'Montserrat'!important;
+  }
+  .req_inputs {
+    margin-top: 3.5rem;
+  }
+}
+
+@media screen and (min-width: 354px) and (max-width: 399px) {
+  .EducationalDetailsBoard_board {
+    padding: 0.3rem!important;
+    border-radius: 20px!important;
+    margin-right: 0.4rem!important;
+    margin-top: 2%!important;
+  }
+  .EducationalDetailsBoard_board p {
+    font: 600 0.8rem 'Montserrat'!important;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 336px) {
+  .EducationalDetailsBoard_board {
+    padding: 0.3rem!important;
+  }
+  .EducationalDetailsBoard_board p {
+    font: 600 0.7rem 'Montserrat'!important;
   }
 }
 
@@ -743,44 +882,28 @@ main {
     padding: 0 !important;
     height: 2rem!important;
   }
-  /*.person-icon {
-      display: none;
+  .EducationalDetailsBoard_board {
+    padding: 0.3rem!important;
   }
-  .sign-in {
-      display: none;
+  .EducationalDetailsBoard_board p {
+    font: 600 0.6rem 'Montserrat'!important;
   }
-  .request-demo {
-      display: none;
+  .req_inputs {
+    margin-top: 3rem;
   }
-  .material-icons {
-      padding-right: 0px;
-      margin-top: 6px;
-      font-size: 20px;
-  }
-  .nav-ham {
-      margin-top: 5px;
-      padding-left: 10px;
-  }
-  .ham {
-      width: 23px;
-      margin-bottom: 3px;
-  }*/
 }
+
+
+@media screen and (min-width: 241px) and (max-width: 279px) {
+  .EducationalDetailsBoard_board {
+    padding: 0.2rem!important;
+  }
+  .EducationalDetailsBoard_board p {
+    font: 600 0.55rem 'Montserrat'!important;
+  }
+}
+
 @media screen and (max-width: 240.98px) {
-  /*.quote {
-      color: white;
-      font-family: 'Montserrat';
-      font-size: 11px;
-      text-align: center;
-      padding: 3px 0px 3px 0px;
-  }
-  .nav-bar {
-      padding-top: 2px;
-      margin: 0px 0px 0px 0px;
-  }
-  .nav-left {
-      padding-right: 0px;
-  }*/
   .nav-logo {
       width: 110px;
       height: auto;
@@ -788,6 +911,42 @@ main {
   }
   
 }
+
+@media screen and (min-width: 399px) and (max-width: 460px) {
+  .EducationalDetailsBoard_board {
+    padding: 5px!important;
+    border-radius: 25px!important;
+    margin-right: 0.4rem!important;
+    margin-top: 2%!important;
+  }
+  .EducationalDetailsBoard_board p {
+    font: 600 0.9rem 'Montserrat'!important;
+  }
+  }
+  
+  @media screen and (min-width: 461px) and (max-width: 512px) {
+  .EducationalDetailsBoard_board {
+    padding: 0.5rem!important;
+    border-radius: 25px!important;
+    margin-right: 0.4rem!important;
+    margin-top: 2%!important;
+  }
+  .EducationalDetailsBoard_board p {
+    font: 600 0.9rem 'Montserrat'!important;
+  }
+  }
+  
+  @media screen and (max-width: 309px) {
+  .EducationalDetailsBoard_board {
+    /* padding: 5px!important; */
+    border-radius: 20px!important;
+    margin-right: 0.3rem!important;
+    margin-top: 2%!important;
+  }
+  .EducationalDetailsBoard_board p {
+    font: 600 0.53rem 'Montserrat'!important;
+  }
+  }
 
 @media screen and (min-width: 767px) and (max-width: 991px) {
 .RequestCard {
