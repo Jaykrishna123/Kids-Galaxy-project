@@ -7,7 +7,7 @@ import Login from './Pages/Login';
 import Signup from './Pages/Signup';
 import PersonalDetails from './SignupForms/PersonalDetails'
 import EducationalDetails from './SignupForms/EducationalDetails'
-import RequestDemo from "./SignupForms/RequestDemo";
+import RequestDemo from "./Pages/RequestDemo";
 import './App.css'
 
 function App() {

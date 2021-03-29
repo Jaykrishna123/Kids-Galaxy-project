@@ -149,7 +149,7 @@ const CreateAccount = ({
                   required
                   value={confPassword}
                   onChange={(e) => setConfPassword(e.target.value)}
-                  onClick={() => moveLabel}/>
+                  />
                   {Object.keys(passwordErr).map((key) => {
                     return <div style={{color: 'red', fontSize:'14px', marginTop:'0px'}}>
                       {passwordErr[key]}

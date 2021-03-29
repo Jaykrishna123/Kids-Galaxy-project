@@ -13,7 +13,7 @@ const Navbar = () => {
         <div class="col-3 nav-left">
           <Link to="/">
             <img src="images/logo.png" alt="kg-logo" class="nav-logo" />
-          </Link>
+          </Link> 
         </div>
         <div class="col d-none d-lg-block nav-center">
           <a href="{}" class="label-1">

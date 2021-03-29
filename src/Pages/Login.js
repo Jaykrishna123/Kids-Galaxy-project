@@ -15,6 +15,7 @@ const Login = () => {
 
   const [loginUsernameErr, setLoginUsernameErr] = useState({});
   const [loginPasswordErr, setLoginPasswordErr] = useState({});
+  const [useStyles, setUseStyles] = useState();
  
   const handleLogin = () => {
     const isValid = formValidation();
@@ -63,7 +64,7 @@ const Login = () => {
 
   return (
 
-<div>
+  <div>
       <div class="green-bg"></div>                                            
     <div class="white-bg"></div>
 
@@ -98,7 +99,7 @@ const Login = () => {
               <form>
                 <span>
                   <label for="email" class="text-small-uppercase-login loginLabel"
-                   style={loginUsername ? {transform: 'translate(0,0)'} : null} >Email</label>
+                   style={loginUsername ? {transform: 'translate(0,0)'} : null } >Email</label>
                  <input class="text-body loginInput" id="email" name="email" type="email" required
                     onChange={(e) => setLoginUsername(e.target.value)} />
                   {Object.keys(loginUsernameErr).map((key) => {

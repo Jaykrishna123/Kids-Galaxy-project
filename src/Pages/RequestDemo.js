@@ -1,16 +1,62 @@
 import React, {useState} from 'react'
-import './RequestDemo.css'
+import RequestDemo1 from '../SignupForms/RequestDemo1';
+import RequestDemo2 from '../SignupForms/RequestDemo2';
 import NavbarLogo from '../components/NavbarLogo';
+import '../SignupForms/RequestDemo.css'
+
 
 const RequestDemo = () => {
-   const [firstName, setFirstName] = useState();
-   const [lastName, setLastName] = useState();
-   const [contactNo, setContactNo] = useState();
-   const [email, setEmail] = useState();
+
+   const [step, setStep] = useState(1);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [isSignedUp, setIsSignedUp] = useState(true);
+
+  const nextStep = () => {
+    setStep(step + 1);
+  };
+  const previousStep = () => {
+    setStep(step - 1);
+  };
+
+  const renderSwitch = (step) => {
+    // eslint-disable-next-line default-case
+    switch (step) {
+      case 1:
+        return (
+          <RequestDemo1
+            nextStep={nextStep}
+            previousStep={previousStep}
+            email={email}
+            setEmail={setEmail}
+            password={password}
+            setPassword={setPassword}
+          />
+        );
+      case 2:
+        return (
+          <RequestDemo2
+            nextStep={nextStep}
+            previousStep={previousStep}
+            firstName={firstName}
+            setFirstName={setFirstName}
+            lastName={lastName}
+            setLastName={setLastName}
+            phone={phone}
+            setPhone={setPhone}
+          />
+        );
+    }
+  };
+
+
 
    return (
       <div>
-        <NavbarLogo/>
+         <NavbarLogo/>
          <div class="row mainContent-Request container-fluid">
             <div class="mainLeft-Request col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 d-md-none d-lg-block">
             <ul class="choose">
@@ -81,45 +127,13 @@ const RequestDemo = () => {
             </ul>
             </div>
             <div class="middleLine-Request d-md-none d-lg-block"></div>
+
+{/* Right content */}
+
             <div class="mainRight-Request col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
-               <div class="card RequestCard">
-                  <div class="cardContent-Request">
-                  <div class="title request-title">
-                     <h1>Request Demo</h1>
-                  </div>
-                     <form>
-                        <span>
-                           <label for="firstName" class="text-small-uppercase-request requestLabel"
-                              style={firstName ? {transform: "translate(0,0)"} : null}>First Name</label>
-                           <input class="text-body requestDemoInput" id="firstName" name="firstName" type="text" required
-                                 onChange={(e) => setFirstName(e.target.value)}/>
-                        </span>
-                        <span>
-                           <label for="lastName" class="text-small-uppercase-request requestLabel"
-                              style={lastName ? {transform: "translate(0,0)"} : null}>Last name</label>
-                           <input class="text-body requestDemoInput" id="lastName" name="lastName" type="text" required
-                              onChange={(e) => setLastName(e.target.value)}/>
-                        </span>
-                        <span>
-                           <label for="contactNo" class="text-small-uppercase-request requestLabel"
-                              style={contactNo ? {transform: "translate(0,0)"} : null}>Contact Number</label>
-                           <input class="text-body requestDemoInput" id="contactNo" name="contactNo" type="text" required
-                              onChange={(e) => setContactNo(e.target.value)}/>
-                        </span>
-                        <span>
-                           <label for="email" class="text-small-uppercase-request requestLabel"
-                              style={email ? {transform: "translate(0,0)"} : null}>Email</label>
-                           <input class="text-body requestDemoInput" id="email" name="email" type="email" required
-                              onChange={(e) => setEmail(e.target.value)}/>
-                        </span>
-                        <span>
-                           <button type="button" class="btn btn-sm text-small-uppercase-button-request request_btn" id="submit">Submit</button>
-                        </span>
-                     </form>
-                  </div>
-               </div>
+            {renderSwitch(step)}
             </div>
-         </div>
+      </div>
       </div>
    )
 }
