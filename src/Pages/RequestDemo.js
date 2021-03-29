@@ -32,8 +32,13 @@ const RequestDemo = () => {
             previousStep={previousStep}
             email={email}
             setEmail={setEmail}
-            password={password}
-            setPassword={setPassword}
+            firstName={firstName}
+            setFirstName={setFirstName}
+            lastName={lastName}
+            setLastName={setLastName}
+            phone={phone}
+            setPhone={setPhone}
+            
           />
         );
       case 2:
@@ -41,12 +46,7 @@ const RequestDemo = () => {
           <RequestDemo2
             nextStep={nextStep}
             previousStep={previousStep}
-            firstName={firstName}
-            setFirstName={setFirstName}
-            lastName={lastName}
-            setLastName={setLastName}
-            phone={phone}
-            setPhone={setPhone}
+            
           />
         );
     }

@@ -35,7 +35,7 @@ const RequestDemo1 = ({
     if(!firstName) {
       firstNameErr.fieldEmpty = 'First name is required';
       isValid = false;
-    }else if(!regex_name.test(firstName.trim(' '))) {
+    }else if(!regex_name.test(firstName.trim())) {
       firstNameErr.invalidInput = 'Please enter a valid name';
       isValid = false;
     }else {
@@ -43,9 +43,9 @@ const RequestDemo1 = ({
     }
 
     if(!lastName) {
-      lastNameErr.fieldEmpty = 'First name is required';
+      lastNameErr.fieldEmpty = 'Last name is required';
       isValid = false;
-    }else if(!regex_name.test(lastName.trim(' '))) {
+    }else if(!regex_name.test(lastName.trim())) {
       lastNameErr.invalidInput = 'Please enter a valid name';
       isValid = false;
     }else {
@@ -55,7 +55,7 @@ const RequestDemo1 = ({
     if(!email) {
       emailErr.fieldEmpty = 'Email name is required';
       isValid = false;
-    }else if(!regex_email.test(email.trim(' '))) {
+    }else if(!regex_email.test(email.trim())) {
       emailErr.invalidInput = 'Please enter a valid email';
       isValid = false;
     }else {
