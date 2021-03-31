@@ -17,7 +17,6 @@ input {
   position: absolute;
 }
 
-
 .choose {
   text-decoration: none;
   list-style-type: none;
@@ -29,83 +28,83 @@ input {
 
 .choose_li_no {
   font-size: 2rem;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 500; 
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
 }
 
 .why-li {
-    width: 3.5rem!important;
-    margin-left: 6.5%!important;
-    margin-top: 15%!important;
+  width: 3.5rem !important;
+  margin-left: 6.5% !important;
+  margin-top: 15% !important;
 }
 
 .fill_in_details {
-    width: 100px;
-    height: 100px;
-    background-color: #F8DFFF;
-    border-radius: 50%;
-    border: 2px solid black;
-    margin-right: 2%;
-    text-align: center;
-    box-shadow: 3px 6px 25px rgb(175, 175, 175);
-    /*top: 50%;
+  width: 100px;
+  height: 100px;
+  background-color: #f8dfff;
+  border-radius: 50%;
+  border: 2px solid black;
+  margin-right: 2%;
+  text-align: center;
+  box-shadow: 3px 6px 25px rgb(175, 175, 175);
+  /*top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);*/
 }
 
 .call_back {
-    width: 100px;
-    height: 100px;
-    background-color: #FFD2D2;
-    border-radius: 50%;
-    border: 2px solid black;
-    margin-right: 2%;
-    text-align: center;
-    box-shadow: 3px 6px 25px rgb(175, 175, 175);
-    /*top: 50%;
+  width: 100px;
+  height: 100px;
+  background-color: #ffd2d2;
+  border-radius: 50%;
+  border: 2px solid black;
+  margin-right: 2%;
+  text-align: center;
+  box-shadow: 3px 6px 25px rgb(175, 175, 175);
+  /*top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);*/
 }
 
 .evaluate_needs {
-    width: 100px;
-    height: 100px;
-    background-color: #D2FDFF;
-    border-radius: 50%;
-    border: 2px solid black;
-    margin-right: 2%;
-    text-align: center;
-    box-shadow: 3px 6px 25px rgb(175, 175, 175);
-    /*top: 50%;
+  width: 100px;
+  height: 100px;
+  background-color: #d2fdff;
+  border-radius: 50%;
+  border: 2px solid black;
+  margin-right: 2%;
+  text-align: center;
+  box-shadow: 3px 6px 25px rgb(175, 175, 175);
+  /*top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);*/
 }
 
 .deliver_demo {
-    width: 100px;
-    height: 100px;
-    background-color: #FFFFCF;
-    border-radius: 50%;
-    border: 2px solid black;
-    margin-right: 2%;
-    text-align: center;
-    box-shadow: 3px 6px 25px rgb(175, 175, 175);
-    /*top: 50%;
+  width: 100px;
+  height: 100px;
+  background-color: #ffffcf;
+  border-radius: 50%;
+  border: 2px solid black;
+  margin-right: 2%;
+  text-align: center;
+  box-shadow: 3px 6px 25px rgb(175, 175, 175);
+  /*top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);*/
 }
 
 .why-li-text {
-    font-size: 0.8rem;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
+  font-size: 0.8rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
 }
 
 .why-li-heading {
-    font-size: 1.5rem;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    margin-bottom: 0;
+  font-size: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  margin-bottom: 0;
 }
 
 .li-text {
@@ -127,7 +126,7 @@ input {
   width: 15vw;
 }
 /* main Left start */
-.mainLeft-Request{
+.mainLeft-Request {
   text-align: center;
   margin-top: 2.5rem;
   padding-left: 2rem;
@@ -144,7 +143,7 @@ input {
   font-size: 1.2rem;
   margin-top: 20px;
 }
-.mainLeftContent-Request{
+.mainLeftContent-Request {
   /*width: 90%;*/
   margin: 0 auto;
   position: absolute;
@@ -221,8 +220,8 @@ input {
   }
 }
 
-input[type=email],
-input[type=text] {
+input[type="email"],
+input[type="text"] {
   height: 1.5rem;
   margin: 0 0 1rem;
   width: 100%;
@@ -245,7 +244,7 @@ form {
 }
 
 main {
-  margin: 2% auto!important;
+  margin: 2% auto !important;
   overflow: hidden;
   position: relative;
   width: 80%;
@@ -271,19 +270,19 @@ main {
   outline: none;
 }
 
-input[type=email]:required,
-input[type=text]:required {
+input[type="email"]:required,
+input[type="text"]:required {
   box-shadow: none;
   outline: none;
   font-size: 1rem;
 }
 
 .request_btn {
-  background: #f37b56!important;
-  border: none!important;
-  outline: none!important;
-  color: #fff!important;
-  padding: 0 2rem!important;
+  background: #f37b56 !important;
+  border: none !important;
+  outline: none !important;
+  color: #fff !important;
+  padding: 0 2rem !important;
   width: 80%;
 }
 
@@ -300,8 +299,9 @@ input[type=text]:required {
 }
 
 .inputs--invalid input {
-  animation: shake 0.3s cubic-bezier(.36,.07,.19,.97) both;
-  background: url(//my-assets.netlify.com/codepen/dailyui-001/ico-invalid.svg) center right no-repeat;
+  animation: shake 0.3s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  background: url(//my-assets.netlify.com/codepen/dailyui-001/ico-invalid.svg)
+    center right no-repeat;
   border-bottom: 2px solid #f37b56;
   box-shadow: none;
   color: #f37b56;
@@ -309,7 +309,8 @@ input[type=text]:required {
 }
 
 @keyframes shake {
-  0%, 100% {
+  0%,
+  100% {
     transform: translate3d(0, 0, 0);
   }
 
@@ -340,12 +341,12 @@ main {
 
 .text-body {
   color: #354c58;
-  font: 700 5rem 'Montserrat', sans-serif;
+  font: 700 5rem "Montserrat", sans-serif;
 }
 
 .text-small-uppercase-request {
   color: #57bb71;
-  font: 700 1.5rem 'Montserrat';
+  font: 700 1.5rem "Montserrat";
   /* letter-spacing: 0.2rem; */
   /* text-transform: uppercase; */
   float: left;
@@ -353,15 +354,15 @@ main {
 
 .text-small-uppercase-button-request {
   /* color: #57bb71!important; */
-  font: 700 1.5rem 'Montserrat'!important;
-  letter-spacing: 0.2rem!important;
+  font: 700 1.5rem "Montserrat" !important;
+  letter-spacing: 0.2rem !important;
   /* text-transform: uppercase; */
   /* float: left; */
 }
 
 /* Background */
 .green-bg {
-  background-color: #57BB72;
+  background-color: #57bb72;
   position: absolute;
   width: 100vw;
   height: 100vh;
@@ -378,7 +379,7 @@ main {
 .quote {
   position: relative;
   color: white;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-size: 15px;
   text-align: center;
   padding: 3px 0px 3px 0px;
@@ -395,7 +396,7 @@ main {
   padding-top: 0.2rem;
   margin: 0px 5px 0px 5px;
 }
-.nav-left{
+.nav-left {
   margin: auto;
   width: auto;
   margin-left: 0px;
@@ -405,14 +406,14 @@ main {
   margin: auto;
   width: 200px;
   height: auto;
-  padding-top:2px;
+  padding-top: 2px;
 }
-.nav-center{
+.nav-center {
   margin: auto;
   width: auto;
   text-align: center;
   padding: 7px 0px 0px 90px;
-  font-family: 'montserrat';
+  font-family: "montserrat";
   font-weight: 500;
 }
 .label-1 {
@@ -429,7 +430,7 @@ main {
   color: #262e42;
   margin-left: 35px;
 }
-.nav-right{
+.nav-right {
   margin: auto;
   width: auto;
   text-align: right;
@@ -461,14 +462,14 @@ main {
   background-color: transparent;
   color: crimson;
   font-weight: 500;
-  box-shadow: inset 0 0 0 3px  crimson, 0 0 1px rgb(0 0 0 / 0%);
+  box-shadow: inset 0 0 0 3px crimson, 0 0 1px rgb(0 0 0 / 0%);
 }
 .nav-ham {
   width: auto;
   margin: 9px 0px 0px 0px;
   padding: 0px 0px 0px 20px;
 }
-.ham{
+.ham {
   width: 30px;
   height: 5px;
   background-color: #262e42;
@@ -502,9 +503,9 @@ main {
       margin: 0px 15px 0px 15px;
   }*/
   .nav-logo {
-      width: 250px;
-      height: auto;
-      padding-top: 0px;
+    width: 250px;
+    height: auto;
+    padding-top: 0px;
   }
   /*.sign-in {
       font-size: 25px;
@@ -527,36 +528,34 @@ main {
       padding-top: 3px;
   }*/
 }
-@media screen and (max-width: 1399.98px){
-  
+@media screen and (max-width: 1399.98px) {
 }
-@media screen and (max-width: 1199.98px){
+@media screen and (max-width: 1199.98px) {
   .material-icons {
-      margin-top: 10px;
+    margin-top: 10px;
   }
 }
-@media screen and (max-width: 991.98px){
-.mainLeft-Request {
-  display: none;
-}
+@media screen and (max-width: 991.98px) {
+  .mainLeft-Request {
+    display: none;
+  }
 }
 @media screen and (max-width: 1024.98px) and (orientation: portrait) {
-  
 }
 
 @media screen and (min-width: 991px) and (max-width: 1046px) {
   .text-small-uppercase-request {
-    font: 700 1.2rem 'Montserrat'!important;
+    font: 700 1.2rem "Montserrat" !important;
   }
 
   .text-small-uppercase-button-request {
-    font: 700 1.2rem 'Montserrat'!important;
+    font: 700 1.2rem "Montserrat" !important;
   }
   .card .request-title h1 {
-    font-size: 40px!important;
+    font-size: 40px !important;
   }
   form {
-      padding: 10px;
+    padding: 10px;
   }
 }
 
@@ -567,20 +566,20 @@ main {
       padding-right: 0px;
   }*/
   .nav-logo {
-      width: 180px;
+    width: 180px;
   }
   /*.nav-ham {
       margin: 7px 0px 0px 0px;
   }*/
   .text-small-uppercase-request {
-  font: 700 1.2rem 'Montserrat'!important;
-}
+    font: 700 1.2rem "Montserrat" !important;
+  }
 
-.text-small-uppercase-button-request {
-  font: 700 1.2rem 'Montserrat'!important;
-}
-.card .request-title h1 {
-    font-size: 40px!important;
+  .text-small-uppercase-button-request {
+    font: 700 1.2rem "Montserrat" !important;
+  }
+  .card .request-title h1 {
+    font-size: 40px !important;
   }
   form {
     padding: 10px;
@@ -599,9 +598,9 @@ main {
       margin: 0px 0px 0px 0px;
   }*/
   .nav-logo {
-      width: 150px;
-      height: auto;
-      padding-top: 4px;
+    width: 150px;
+    height: auto;
+    padding-top: 4px;
   }
   /*.person-icon {
       display: none;
@@ -629,16 +628,16 @@ main {
 
 @media screen and (max-width: 485px) {
   .RequestCard {
-      width: 90%!important;
+    width: 90% !important;
   }
 }
 
 @media screen and (max-width: 415px) {
   .RequestCard {
-      width: 95%!important;
+    width: 95% !important;
   }
   .card .request-title h1 {
-    font-size: 35px!important;
+    font-size: 35px !important;
   }
 }
 
@@ -655,9 +654,9 @@ main {
       margin: 0px 0px 0px 0px;
   }*/
   .nav-logo {
-      width: 130px;
-      height: auto;
-      margin-top: 4px;
+    width: 130px;
+    height: auto;
+    margin-top: 4px;
   }
   /*.person-icon {
       display: none;
@@ -681,28 +680,28 @@ main {
       width: 23px;
       margin-bottom: 3px;
   }*/
-}  
+}
 
 @media screen and (max-width: 355px) {
   .text-small-uppercase-request {
-    font: 700 0.9rem 'Montserrat'!important;
+    font: 700 0.9rem "Montserrat" !important;
   }
 
   .text-small-uppercase-button-request {
-    font: 700 0.9rem 'Montserrat'!important;
+    font: 700 0.9rem "Montserrat" !important;
   }
   .card .request-title h1 {
-    font-size: 30px!important;
+    font-size: 30px !important;
   }
   form {
-      padding: 7px;
+    padding: 7px;
   }
   .RequestCard {
-      width: 98%!important;
+    width: 98% !important;
   }
   .request_btn {
     padding: 0 !important;
-    height: 2.5rem!important;
+    height: 2.5rem !important;
   }
 }
 
@@ -719,29 +718,29 @@ main {
       margin: 0px;
   }*/
   .nav-logo {
-      width: 130px;
-      height: auto;
-      margin-top: 0px;
+    width: 130px;
+    height: auto;
+    margin-top: 0px;
   }
   .text-small-uppercase-request {
-    font: 700 0.9rem 'Montserrat'!important;
+    font: 700 0.9rem "Montserrat" !important;
   }
 
   .text-small-uppercase-button-request {
-    font: 700 0.9rem 'Montserrat'!important;
+    font: 700 0.9rem "Montserrat" !important;
   }
   .card .request-title h1 {
-    font-size: 25px!important;
+    font-size: 25px !important;
   }
   form {
-      padding: 7px;
+    padding: 7px;
   }
   .RequestCard {
-      width: 98%!important;
+    width: 98% !important;
   }
   .request_btn {
     padding: 0 !important;
-    height: 2rem!important;
+    height: 2rem !important;
   }
   /*.person-icon {
       display: none;
@@ -782,48 +781,47 @@ main {
       padding-right: 0px;
   }*/
   .nav-logo {
-      width: 110px;
-      height: auto;
-      margin-top: 0px;
+    width: 110px;
+    height: auto;
+    margin-top: 0px;
   }
-  
 }
 
 @media screen and (min-width: 767px) and (max-width: 991px) {
-.RequestCard {
-  width: 60%!important;
-}
+  .RequestCard {
+    width: 60% !important;
+  }
 }
 
 @media screen and (min-width: 1030px) and (max-width: 1200px) {
   .choose_li_no {
-    font-size: 1.7rem; 
+    font-size: 1.7rem;
   }
   .why-li-text {
     font-size: 0.7rem;
-}
+  }
 
-.why-li-heading {
+  .why-li-heading {
     font-size: 1.3rem;
   }
 }
 
 @media screen and (min-width: 991px) and (max-width: 1030px) {
   .choose_li_no {
-    font-size: 1.5rem; 
+    font-size: 1.5rem;
   }
   .why-li-text {
     font-size: 0.6rem;
-}
+  }
 
   .why-li-heading {
     font-size: 1.2rem;
   }
   .why-li {
-    width: 3rem!important;
-    margin-left: 5.5%!important;
-    margin-top: 15%!important;
-}
+    width: 3rem !important;
+    margin-left: 5.5% !important;
+    margin-top: 15% !important;
+  }
 
   .fill_in_details {
     width: 85px;

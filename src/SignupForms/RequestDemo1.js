@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import './RequestDemo.css'
 import NavbarLogo from '../components/NavbarLogo';
 
-const RequestDemo = () => {
+const RequestDemo1 = () => {
    const [firstName, setFirstName] = useState();
    const [lastName, setLastName] = useState();
    const [contactNo, setContactNo] = useState();
@@ -124,4 +124,4 @@ const RequestDemo = () => {
    )
 }
 
-export default RequestDemo
+export default RequestDemo1

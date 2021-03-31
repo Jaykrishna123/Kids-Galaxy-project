@@ -51,8 +51,8 @@
   color: rgb(87, 187, 113);
 }
 .landingpage__image img {
-  height: 800px;
-  margin-top: 10rem;
+  height: 679px;
+  margin-top: 3rem;
 }
 
 /* .landingPage-main-content end*/
@@ -69,6 +69,13 @@
     margin-top: 2rem;
   }
 }
+@media screen and (min-height: 1000px) {
+  .landingpage__image img {
+    height: 750px;
+    margin-top: 8rem;
+  }
+}
+
 @media screen and (max-width: 625.98px) and (max-height: 561px) {
   .landingpage__image img {
     height: 430px;
@@ -191,8 +198,8 @@
     font-size: 1.5vw;
   }
   .landingpage__image img {
-    height: 680px;
-    margin-top: 11rem;
+    height: 507px;
+    margin-top: 2rem;
   }
   .landingpage-main-content {
     height: 78vh;
@@ -268,15 +275,13 @@
     font-family: "Montserrat", sans-serif;
     font-size: 1.5vw;
   }
-  .landingpage__image img {
-    height: 750px;
-    margin-top: 8rem;
-  }
+
   .landingpage-main-content {
     height: 80vh;
     margin-top: 1rem;
   }
 }
+
 @media (min-width: 992px) and (max-width: 1009px) {
   .landingpage__info {
     margin-left: 5rem;
@@ -347,6 +352,7 @@
     justify-content: center;
     align-items: center;
     height: 55vh;
+    margin-top: 1rem;
   }
   .landingpage__image img {
     width: auto;
@@ -390,6 +396,7 @@
     justify-content: center;
     align-items: center;
     height: 55vh;
+    margin-top: 1rem;
   }
   .landingpage__image img {
     width: auto;

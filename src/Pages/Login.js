@@ -1,6 +1,8 @@
 import React, { useState} from "react";
 // import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import UseForm from '../Pages/UseForm'
+import validate from '../Pages/LoginValidationForm';
 
 // import { AuthContext } from "../shared/context/auth-context";
 // import { Auth } from "aws-amplify";
@@ -10,56 +12,71 @@ import "./Login.css";
 
 const Login = () => {
   // const auth = useContext(AuthContext);
-  const [loginUsername, setLoginUsername] = useState("");
-  const [loginPassword, setLoginPassword] = useState("");
+  
 
-  const [loginUsernameErr, setLoginUsernameErr] = useState({});
-  const [loginPasswordErr, setLoginPasswordErr] = useState({});
- 
-  const handleLogin = () => {
-    const isValid = formValidation();
-    if (isValid) {
-      alert('Logged in successfully!!');
-    }
-    // try {
-    //   const user = await Auth.signIn(loginUsername, loginPassword);
-    //   // console.log(user);
-    //   // history.push("/dashboard");
-    //   // const session = await Auth.currentSession();
-    //   const userAuth = await Auth.currentAuthenticatedUser();
-    //   auth.login();
-    // } catch (error) {
-    //   // console.log("error signing in", error);
-    //   // alert(error.message);
-    // }
-  };
+  const [email,setEmail] = useState(false);
+  const [password, setPassword] = useState(false);
 
-  const formValidation = () => {
-    const loginUsernameErr = {};
-    const loginPasswordErr = {};
-    let isValid = true;
-    const regex = /\S+@\S+\.\S+/;
+  const {
+    values,
+    errors,
+    handleChange,
+    handleSubmit,
+  } = UseForm(login, validate);
 
-    if (!loginUsername) {
-      loginUsernameErr.fieldEmpty = "Username required";
-      isValid = false;
-    } else if (!regex.test(loginUsername)) {
-      loginUsernameErr.invalidInput = "Enter a valid email address";
-      isValid = false;
-    } else {
-      isValid = true;
-    }
-
-    if (!loginPassword) {
-      loginPasswordErr.fieldEmpty = "Password required";
-      isValid = false;
-    }
-
-    setLoginUsernameErr(loginUsernameErr);
-    setLoginPasswordErr(loginPasswordErr);
-
-    return isValid;
+  function login() {
+    console.log('No errors, submit callback called!');
   }
+
+  
+
+
+  
+ 
+  // const handleLogin = () => {
+  //   const isValid = formValidation();
+  //   if (isValid) {
+  //     alert('Logged in successfully!!');
+  //   }
+  //   // try {
+  //   //   const user = await Auth.signIn(loginUsername, loginPassword);
+  //   //   // console.log(user);
+  //   //   // history.push("/dashboard");
+  //   //   // const session = await Auth.currentSession();
+  //   //   const userAuth = await Auth.currentAuthenticatedUser();
+  //   //   auth.login();
+  //   // } catch (error) {
+  //   //   // console.log("error signing in", error);
+  //   //   // alert(error.message);
+  //   // }
+  // };
+
+  // const formValidation = () => {
+  //   const loginUsernameErr = {};
+  //   const loginPasswordErr = {};
+  //   let isValid = true;
+  //   const regex = /\S+@\S+\.\S+/;
+
+  //   if (!loginUsername) {
+  //     loginUsernameErr.classList = "active";
+  //     isValid = false;
+  //   } else if (!regex.test(loginUsername)) {
+  //     loginUsernameErr.invalidInput = "Enter a valid email address";
+  //     isValid = false;
+  //   } else {
+  //     isValid = true;
+  //   }
+
+  //   if (!loginPassword) {
+  //     loginPasswordErr.fieldEmpty = "Password required";
+  //     isValid = false;
+  //   }
+
+  //   setLoginUsernameErr(loginUsernameErr);
+  //   setLoginPasswordErr(loginPasswordErr);
+
+  //   return isValid;
+  // }
 
   return (
 
@@ -95,28 +112,24 @@ const Login = () => {
               <div class="title">
                 <h1>Log In</h1>
               </div>
-              <form>
+              <form onSubmit={handleSubmit} noValidate>
                 <span>
-                  <label for="email" class="text-small-uppercase-login loginLabel"
-                   style={loginUsername ? {transform: 'translate(0,0)'} : null} >Email</label>
-                 <input class="text-body loginInput" id="email" name="email" type="email" required
-                    onChange={(e) => setLoginUsername(e.target.value)} />
-                  {Object.keys(loginUsernameErr).map((key) => {
-                    return <div style={{color: 'red', fontSize: '14px'}}>
-                      {loginUsernameErr[key]}
-                    </div>
-                  })}
+                  <label for="email" className={`text-small-uppercase-login loginLabel email ${email && "labelup"} ${errors.email && "is-danger"}`}
+                   >Email</label>
+                 <input autoComplete="off"
+                 className={`text-body loginInput  ${errors.email && "is-danger"}`} type="email" name="email" id="email" onChange={handleChange} value={values.email || ''} required
+                  onClick={() => setEmail(!email)}/>
+                  {errors.email && (
+                    <p className="help is-danger">{errors.email}</p>
+                  )}
                 </span>
                 <span>
-                  <label for="password" class="text-small-uppercase-login loginLabel"
-                     style={loginPassword ? {transform: 'translate(0,0)'} : null} >Password</label>
-                  <input class="text-body loginInput" id="password" name="password" type="password" required
-                    onChange={(e) => setLoginPassword(e.target.value)} />
-                  {Object.keys(loginPasswordErr).map((key) => {
-                    return <div style={{color: 'red', fontSize: '14px'}}>
-                      {loginPasswordErr[key]}
-                    </div>
-                  })}
+                  <label for="password" className={`text-small-uppercase-login loginLabel password ${password && "label1up"} ${errors.password && "is-danger"}`}>Password</label>
+                  <input class={`text-body loginInput ${errors.password && 'is-danger'}`} type="password" name="password" onChange={handleChange} value={values.password || ''} required
+                  onClick={() => setPassword(!password)} />
+                  {errors.password && (
+                    <p className="help is-danger">{errors.password}</p>
+                  )}
                 </span>
                 <div class="checkbox">
                   <div class="rememberBox">
@@ -127,7 +140,7 @@ const Login = () => {
                 </div>
                 <span>
                   {/* <input class="text-small-uppercase-button" id="submit" type="submit" value="Login" /> */}
-                  <button type="button" class="btn btn-sm text-small-uppercase-button-login login_btn" id="submit" onClick={handleLogin}>Login</button>
+                  <button type="submit" class="btn btn-sm text-small-uppercase-button-login login_btn">Login</button>
                 </span>
               </form>
 

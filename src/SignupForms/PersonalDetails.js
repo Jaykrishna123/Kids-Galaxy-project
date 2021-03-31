@@ -1,75 +1,83 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-
+import UseForm from '../SignupForms/CreateUseFrom'
+import validate from '../SignupForms/PersonalDetailsValidation';
 
 const PersonalDetails = ({
   nextStep,
   previousStep,
-  firstName,
-  setFirstName,
-  lastName,
-  setLastName,
-  phone,
-  setPhone,
-}) => {
-  const [firstNameErr, setFirstNameErr] = useState({});
-  const [lastNameErr, setLastNameErr] = useState({});
-  const [phoneErr, setPhoneErr] = useState({});
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const isValid = formValidation();
-    if (isValid) {
-      nextStep();
-    }
-  };
   
-  const formValidation = () => {
-    const firstNameErr = {};
-    const lastNameErr = {};
-    const phoneErr = {};
-    let isValid = true;
-    const regex = /^[A-Za-z]+/;
-    const regex_number = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
+}) => {
+  const [firstName,setFirstName] = useState(false);
+  const [lastName, setLastName] = useState(false);
+  const [phoneNumber, setPhoneNumber] = useState(false);
+
+  const {
+    values,
+    errors,
+    handleChange,
+    handleSubmit,
+  } = UseForm(login, validate);
+
+  function login() {
+    nextStep();
+  }
+
+
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   const isValid = formValidation();
+  //   if (isValid) {
+  //     nextStep();
+  //   }
+  // };
+  
+  // const formValidation = () => {
+  //   const firstNameErr = {};
+  //   const lastNameErr = {};
+  //   const phoneErr = {};
+  //   let isValid = true;
+  //   const regex = /^[a-zA-Z]+ [a-zA-Z]+$/;
+  //   const regex_number = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
     
-    if (!firstName) {
-      firstNameErr.fieldEmpty = "First Name Required"
-      isValid = false;
-    }else if (!regex.test(firstName.trim())) {
-      firstNameErr.invalidInput = 'Enter a valid name';
-      isValid = false;
-    }else {
-      isValid = true;
-    }
+  //   if (!firstName) {
+  //     firstNameErr.fieldEmpty = "First Name Required"
+  //     isValid = false;
+  //   }else if (!regex.test(firstName.trim())) {
+  //     firstNameErr.invalidInput = 'Enter a valid name';
+  //     isValid = false;
+  //   }else {
+  //     isValid = true;
+  //   }
     
-    if (!lastName) {
-      lastNameErr.fieldEmpty = "Last Name Required"
-      isValid = false;
-    }else if (!regex.test(lastName.trim())) {
-      lastNameErr.invalidInput = 'Enter a valid name';
-      isValid = false;
-    }else {
-      isValid = true;
-    }
+  //   if (!lastName) {
+  //     lastNameErr.fieldEmpty = "Last Name Required"
+  //     isValid = false;
+  //   }else if (!regex.test(lastName.trim())) {
+  //     lastNameErr.invalidInput = 'Enter a valid name';
+  //     isValid = false;
+  //   }else {
+  //     isValid = true;
+  //   }
 
-    if (!phone) {
-      phoneErr.fieldEmpty = "Phone number required";
-      isValid = false;
-    } else if (!regex_number.test(phone.trim())) {
-      phoneErr.invalidInput = "Invalid phone number";
-      isValid = false;
-    }else {
-      isValid = true;
-    }
+  //   if (!phone) {
+  //     phoneErr.fieldEmpty = "Phone number required";
+  //     isValid = false;
+  //   } else if (!regex_number.test(phone.trim())) {
+  //     phoneErr.invalidInput = "Invalid phone number";
+  //     isValid = false;
+  //   }else {
+  //     isValid = true;
+  //   }
 
-    setFirstNameErr(firstNameErr);
-    setLastNameErr(lastNameErr);
-    setPhoneErr(phoneErr);
+  //   setFirstNameErr(firstNameErr);
+  //   setLastNameErr(lastNameErr);
+  //   setPhoneErr(phoneErr);
 
-    return isValid;
+  //   return isValid;
 
-  };
+  // };
 
   return (
     <div className="card loginCard">
@@ -81,69 +89,51 @@ const PersonalDetails = ({
         <form>
         <span>
             <label
-              for="fname"
-              class="text-small-uppercase"
-              style={firstName ? { transform: "translate(0,0)" } : null}
+            for="firstName"
+            className={`text-small-uppercase ${errors.firstName && "is-danger"}`}
+            style={firstName ? { transform: "translate(0,0)" } : null}
             >
               First Name
             </label>
             <input
-              class="text-body"
-              id="fname"
-              name="fname"
-              type="text"
-              required
-              value={firstName}
-              onChange={(e) => setFirstName(e.target.value)} />
-            {Object.keys(firstNameErr).map((key) => {
-                return <p style={{ color: 'red', fontSize:'14px'}}>
-                  {firstNameErr[key]}
-                </p>
-              })}
+            class={`text-body ${errors.firstName && "is-danger"}`}
+            type="text" name="firstName" id="firstName" onChange={handleChange} value={values.firstName || ''} required
+            onClick={() => setFirstName(!firstName)}/>
+            {errors.firstName && (
+              <p className="help is-danger">{errors.firstName}</p>
+            )}
         </span>
         <span>
-            <label
-              for="lname"
-              class="text-small-uppercase"
-              style={lastName ? { transform: "translate(0,0)" } : null}
-            >
-              Last Name
-            </label>
-            <input
-              class="text-body"
-              id="lname"
-              name="lname"
-              type="text"
-              required
-              value={lastName}
-              onChange={(e) => setLastName(e.target.value)} />
-              {Object.keys(lastNameErr).map((key) => {
-                return <p style={{color: 'red', fontSize:'14px' }}>
-                  {lastNameErr[key]}
-                </p>
-              })}
+        <label
+        for="lastName"
+        className={`text-small-uppercase ${errors.lastName && "is-danger"}`}
+        style={lastName ? { transform: "translate(0,0)" } : null}
+        >
+          Last Name
+        </label>
+        <input
+        class={`text-body ${errors.lastName && "is-danger"}`}
+        type="text" name="lastName" id="lastName" onChange={handleChange} value={values.lastName || ''} required
+        onClick={() => setLastName(!lastName)}/>
+        {errors.lastName && (
+          <p className="help is-danger">{errors.lastName}</p>
+        )}
         </span>
         <span>
-            <label
-              for="mobile"
-              class="text-small-uppercase"
-              style={phone ? { transform: "translate(0,0)" } : null}
+        <label
+            for="phone"
+            className={`text-small-uppercase ${errors.phoneNumber && "is-danger"}`}
+            style={phoneNumber ? { transform: "translate(0,0)" } : null}
             >
-              Mobile Number
+              Phone Number
             </label>
             <input
-              class="text-body"
-              id="mobile"
-              name="mobile"
-              type="text"
-              required
-              value={phone}
-              onChange={(e) => setPhone(e.target.value)} />
-            {Object.keys(phoneErr).map((key) => {
-                return <p style={{color: 'red', fontSize:'14px', marginTop:'20px'}}>
-                  {phoneErr[key]}
-                </p>
-              })}
+            class={`text-body ${errors.phoneNumber && "is-danger"}`}
+            type="text" name="phoneNumber" id="phoneNumber" onChange={handleChange} value={values.phoneNumber || ''} required
+            onClick={() => setPhoneNumber(!phoneNumber)}/>
+            {errors.phoneNumber && (
+              <p className="help is-danger">{errors.phoneNumber}</p>
+            )}
         </span>
         <div>
           {/* <Link to='/createaccount'> */}
@@ -153,7 +143,7 @@ const PersonalDetails = ({
           {/* </Link> */}
           <Link to='/educationaldetails'>
           <span>
-          <button type="button" class="btn btn-sm text-small-uppercase-button login_btn back_btn" id="submit" onClick={handleSubmit}>Next</button>
+          <button onClick={handleSubmit} noValidate type="submit" class="btn btn-sm text-small-uppercase-button login_btn back_btn" id="submit" >Next</button>
           </span>
           </Link>
       </div>
