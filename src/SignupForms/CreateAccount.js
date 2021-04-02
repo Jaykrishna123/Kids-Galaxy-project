@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import UseForm from '../SignupForms/CreateUseFrom'
 import validate from '../SignupForms/CreateAccountValidation';
-
+import { Button, Modal} from 'react-bootstrap'; 
 import "./Signup.css";
 const CreateAccount = (
    {nextStep},
@@ -15,6 +15,10 @@ const CreateAccount = (
   const [email,setEmail] = useState(false);
   const [password, setPassword] = useState(false);
   const [confirmpassword, setConfirmPassword] = useState(false);
+
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
   const {
     values,
@@ -156,7 +160,7 @@ const CreateAccount = (
                     <input type="checkbox" id="accept-checkbox"/>
                       <p class="blue">
                       I accept the 
-                      <button class="terms-of-service">Terms of Service</button>
+                      <button class="terms-of-service" onClick={handleShow}>Terms of Service</button>
                       </p>
                   </div>
               </div>
@@ -188,6 +192,26 @@ const CreateAccount = (
         </div>
       </div>
       {/*  card content  */}
+
+      <Modal show={show} onHide={handleClose} scrollable>
+        <Modal.Header>
+          <Modal.Title>Terms of Service</Modal.Title>
+        </Modal.Header>
+        <Modal.Body >
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
 
       
     </div>

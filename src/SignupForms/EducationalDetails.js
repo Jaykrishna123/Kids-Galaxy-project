@@ -15,6 +15,9 @@ const EducationalDetails = ({
 
   const showSubmit = () => {
     alert('Account Created!');  
+    console.log(firstName);
+    console.log(lastName);
+    console.log(phone);
   };
 
    return (
